@@ -21,33 +21,6 @@
     "url": "https://github.com/mhelvens/graph.js/issues"
   },
   "license": "MIT",
-  "dependencies": {
-    "babel-core": "~5"
-  },
-  "devDependencies": {
-    "babel": "~5",
-    "babel-loader": "~5",
-    "bower": "~1",
-    "isparta": "~2",
-    "isparta-instrumenter-loader": "~0.2",
-    "istanbul": "~0.3",
-    "jasmine-core": "~2",
-    "jsdoc": "~3",
-    "jsdoc-to-markdown": "~1",
-    "karma": "~0.12",
-    "karma-babel-preprocessor": "~5",
-    "karma-cli": "~0.0",
-    "karma-coverage": "~0.2",
-    "karma-coveralls": "~0.1",
-    "karma-jasmine": "~0.3",
-    "karma-phantomjs-launcher": "~0.1",
-    "karma-sourcemap-loader": "~0.3",
-    "karma-webpack": "~1",
-    "phantomjs-polyfill": "*",
-    "uglifyjs": "~2",
-    "wallaby-webpack": "~0",
-    "webpack": "~1"
-  },
   "scripts": {
     "pp": "npm run build && npm run docs && npm run test",
     "build": "mkdir -p dist && cp src/*.es6.js dist && webpack && uglifyjs dist/graph.js -mo dist/graph.min.js --in-source-map dist/graph.js.map --source-map dist/graph.min.js.map && uglifyjs dist/graph.full.js -mo dist/graph.full.min.js --in-source-map dist/graph.full.js.map --source-map dist/graph.full.min.js.map",
