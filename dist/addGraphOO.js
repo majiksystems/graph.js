@@ -2,7 +2,7 @@
 	if(typeof exports === 'object' && typeof module === 'object')
 		module.exports = factory();
 	else if(typeof define === 'function' && define.amd)
-		define(factory);
+		define([], factory);
 	else if(typeof exports === 'object')
 		exports["Graph"] = factory();
 	else
@@ -53,25 +53,25 @@ return /******/ (function(modules) { // webpackBootstrap
 /******/ ({
 
 /***/ 0:
-/***/ function(module, exports, __webpack_require__) {
+/***/ (function(module, exports, __webpack_require__) {
 
-	module.exports = __webpack_require__(90);
+	module.exports = __webpack_require__(127);
 
 
-/***/ },
+/***/ }),
 
-/***/ 11:
-/***/ function(module, exports, __webpack_require__) {
+/***/ 47:
+/***/ (function(module, exports) {
 
+	//  ////////////////////////////////////////////////////////////////////////////////////////////////
+	//  // Symbols for private members /////////////////////////////////////////////////////////////////
+	//  ////////////////////////////////////////////////////////////////////////////////////////////////
+	
 	"use strict";
 	
 	Object.defineProperty(exports, "__esModule", {
 		value: true
 	});
-	//  ////////////////////////////////////////////////////////////////////////////////////////////////
-	//  // Symbols for private members /////////////////////////////////////////////////////////////////
-	//  ////////////////////////////////////////////////////////////////////////////////////////////////
-	
 	window.__graphjs__private__ = window.__graphjs__private__ || {};
 	
 	var _options = window.__graphjs__private__._options || Symbol("options");
@@ -147,10 +147,10 @@ return /******/ (function(modules) { // webpackBootstrap
 		_expectNoConnectedEdges: _expectNoConnectedEdges
 	});
 
-/***/ },
+/***/ }),
 
-/***/ 90:
-/***/ function(module, exports, __webpack_require__) {
+/***/ 127:
+/***/ (function(module, exports, __webpack_require__) {
 
 	"use strict";
 	
@@ -158,25 +158,23 @@ return /******/ (function(modules) { // webpackBootstrap
 		value: true
 	});
 	
+	var _slicedToArray = (function () { function sliceIterator(arr, i) { var _arr = []; var _n = true; var _d = false; var _e = undefined; try { for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"]) _i["return"](); } finally { if (_d) throw _e; } } return _arr; } return function (arr, i) { if (Array.isArray(arr)) { return arr; } else if (Symbol.iterator in Object(arr)) { return sliceIterator(arr, i); } else { throw new TypeError("Invalid attempt to destructure non-iterable instance"); } }; })();
+	
 	var _createClass = (function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; })();
 	
-	var _get = function get(_x, _x2, _x3) { var _again = true; _function: while (_again) { desc = parent = getter = undefined; _again = false; var object = _x,
-	    property = _x2,
-	    receiver = _x3; var desc = Object.getOwnPropertyDescriptor(object, property); if (desc === undefined) { var parent = Object.getPrototypeOf(object); if (parent === null) { return undefined; } else { _x = parent; _x2 = property; _x3 = receiver; _again = true; continue _function; } } else if ("value" in desc) { return desc.value; } else { var getter = desc.get; if (getter === undefined) { return undefined; } return getter.call(receiver); } } };
+	var _get = function get(_x, _x2, _x3) { var _again = true; _function: while (_again) { var object = _x, property = _x2, receiver = _x3; _again = false; if (object === null) object = Function.prototype; var desc = Object.getOwnPropertyDescriptor(object, property); if (desc === undefined) { var parent = Object.getPrototypeOf(object); if (parent === null) { return undefined; } else { _x = parent; _x2 = property; _x3 = receiver; _again = true; desc = parent = undefined; continue _function; } } else if ("value" in desc) { return desc.value; } else { var getter = desc.get; if (getter === undefined) { return undefined; } return getter.call(receiver); } } };
+	
+	exports["default"] = addGraphOO;
+	
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+	
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+	
+	var _privateEs6Js = __webpack_require__(47);
 	
 	//  ////////////////////////////////////////////////////////////////////////////////////////////////
 	//  // Graph.GraphOO ///////////////////////////////////////////////////////////////////////////////
 	//  ////////////////////////////////////////////////////////////////////////////////////////////////
-	
-	exports["default"] = addGraphOO;
-	
-	function _slicedToArray(arr, i) { if (Array.isArray(arr)) { return arr; } else if (Symbol.iterator in Object(arr)) { var _arr = []; var _n = true; var _d = false; var _e = undefined; try { for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"]) _i["return"](); } finally { if (_d) throw _e; } } return _arr; } else { throw new TypeError("Invalid attempt to destructure non-iterable instance"); } }
-	
-	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-	
-	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) subClass.__proto__ = superClass; }
-	
-	var _options$_extractTwoArgs$_extractThreeArgs$_expectVertices$_expectVerticesAbsent$_expectEdges$_expectEdgesAbsent$_expectNoConnectedEdges = __webpack_require__(11);
 	
 	function addGraphOO(Graph) {
 	
@@ -193,41 +191,41 @@ return /******/ (function(modules) { // webpackBootstrap
 	  * @see {@link Graph}
 	  */
 		return Graph.GraphOO = (function (_Graph) {
+			_inherits(GraphOO, _Graph);
+	
 			function GraphOO() {
 				_classCallCheck(this, GraphOO);
 	
-				if (_Graph != null) {
-					_Graph.apply(this, arguments);
-				}
+				_get(Object.getPrototypeOf(GraphOO.prototype), "constructor", this).apply(this, arguments);
 			}
-	
-			_inherits(GraphOO, _Graph);
 	
 			_createClass(GraphOO, [{
 				key: _init,
-				value: function () {
-					var _this2 = this;
+				value: function value() {
+					var _this = this;
 	
 					if (!this[_vertexObjects]) {
 						(function () {
-							_this2[_vertexObjects] = new Map();
-							_this2[_edgeObjects] = new Map();
+							_this[_vertexObjects] = new Map();
+							_this[_edgeObjects] = new Map();
 	
-							var thisGraph = _this2;
+							var thisGraph = _this;
 	
 							/**
 	       * @class Graph.GraphOO#Vertex
 	       * @classdesc A class for representing vertices in a `GraphOO` instance.
 	       */
-							var VertexSuperclass = _this2[_options$_extractTwoArgs$_extractThreeArgs$_expectVertices$_expectVerticesAbsent$_expectEdges$_expectEdgesAbsent$_expectNoConnectedEdges._options].VertexSuperclass || Object;
-							var vertexSuperArguments = _this2[_options$_extractTwoArgs$_extractThreeArgs$_expectVertices$_expectVerticesAbsent$_expectEdges$_expectEdgesAbsent$_expectNoConnectedEdges._options].vertexSuperArguments || function () {
+							var VertexSuperclass = _this[_privateEs6Js._options].VertexSuperclass || Object;
+							var vertexSuperArguments = _this[_privateEs6Js._options].vertexSuperArguments || function () {
 								for (var _len = arguments.length, args = Array(_len), _key = 0; _key < _len; _key++) {
 									args[_key] = arguments[_key];
 								}
 	
 								return args;
 							};
-							_this2.Vertex = (function (_VertexSuperclass) {
+							_this.Vertex = (function (_VertexSuperclass) {
+								_inherits(Vertex, _VertexSuperclass);
+	
 								function Vertex(key, value) {
 									_classCallCheck(this, Vertex);
 	
@@ -240,16 +238,9 @@ return /******/ (function(modules) { // webpackBootstrap
 									}
 								}
 	
-								_inherits(Vertex, _VertexSuperclass);
-	
 								_createClass(Vertex, [{
-									key: "length",
-									get: function () {
-										return 2;
-									}
-								}, {
 									key: Symbol.iterator,
-									value: function () {
+									value: function value() {
 										var marked6$0 = [iterator].map(regeneratorRuntime.mark);
 	
 										// overly verbose because jsdoc doesn't parse *[Symbol.iterator]() notation
@@ -271,24 +262,6 @@ return /******/ (function(modules) { // webpackBootstrap
 											}, marked6$0[0], this);
 										}
 										return iterator.apply(this);
-									}
-								}, {
-									key: "graph",
-									get: function () {
-										return thisGraph;
-									}
-								}, {
-									key: "key",
-									get: function () {
-										return this[0];
-									}
-								}, {
-									key: "value",
-									get: function () {
-										return this[1];
-									},
-									set: function (value) {
-										return this.set(value);
 									}
 								}, {
 									key: "set",
@@ -380,6 +353,29 @@ return /******/ (function(modules) { // webpackBootstrap
 									value: function degree() {
 										return thisGraph.degree(this.key);
 									}
+								}, {
+									key: "length",
+									get: function get() {
+										return 2;
+									}
+								}, {
+									key: "graph",
+									get: function get() {
+										return thisGraph;
+									}
+								}, {
+									key: "key",
+									get: function get() {
+										return this[0];
+									}
+								}, {
+									key: "value",
+									get: function get() {
+										return this[1];
+									},
+									set: function set(value) {
+										return this.set(value);
+									}
 								}]);
 	
 								return Vertex;
@@ -389,15 +385,17 @@ return /******/ (function(modules) { // webpackBootstrap
 	       * @class Graph.GraphOO#Edge
 	       * @classdesc A class for representing edges in a `GraphOO` instance.
 	       */
-							var EdgeSuperclass = _this2[_options$_extractTwoArgs$_extractThreeArgs$_expectVertices$_expectVerticesAbsent$_expectEdges$_expectEdgesAbsent$_expectNoConnectedEdges._options].EdgeSuperclass || Object;
-							var edgeSuperArguments = _this2[_options$_extractTwoArgs$_extractThreeArgs$_expectVertices$_expectVerticesAbsent$_expectEdges$_expectEdgesAbsent$_expectNoConnectedEdges._options].edgeSuperArguments || function () {
+							var EdgeSuperclass = _this[_privateEs6Js._options].EdgeSuperclass || Object;
+							var edgeSuperArguments = _this[_privateEs6Js._options].edgeSuperArguments || function () {
 								for (var _len2 = arguments.length, args = Array(_len2), _key2 = 0; _key2 < _len2; _key2++) {
 									args[_key2] = arguments[_key2];
 								}
 	
 								return args;
 							};
-							_this2.Edge = (function (_EdgeSuperclass) {
+							_this.Edge = (function (_EdgeSuperclass) {
+								_inherits(Edge, _EdgeSuperclass);
+	
 								function Edge(from, to, value) {
 									_classCallCheck(this, Edge);
 	
@@ -415,16 +413,9 @@ return /******/ (function(modules) { // webpackBootstrap
 									this._target = thisGraph.vertex(to);
 								}
 	
-								_inherits(Edge, _EdgeSuperclass);
-	
 								_createClass(Edge, [{
-									key: "length",
-									get: function () {
-										return 2;
-									}
-								}, {
 									key: Symbol.iterator,
-									value: function () {
+									value: function value() {
 										var marked6$0 = [iterator].map(regeneratorRuntime.mark);
 	
 										// overly verbose because jsdoc doesn't parse *[Symbol.iterator]() notation
@@ -448,44 +439,6 @@ return /******/ (function(modules) { // webpackBootstrap
 										return iterator.apply(this);
 									}
 								}, {
-									key: "graph",
-									get: function () {
-										return thisGraph;
-									}
-								}, {
-									key: "key",
-									get: function () {
-										return this[0];
-									}
-								}, {
-									key: "from",
-									get: function () {
-										return this[0][0];
-									}
-								}, {
-									key: "to",
-									get: function () {
-										return this[0][1];
-									}
-								}, {
-									key: "value",
-									get: function () {
-										return this[1];
-									},
-									set: function (value) {
-										return this.set(value);
-									}
-								}, {
-									key: "source",
-									get: function () {
-										return this._source;
-									}
-								}, {
-									key: "target",
-									get: function () {
-										return this._target;
-									}
-								}, {
 									key: "set",
 									value: function set(value) {
 										return thisGraph.setEdge(this.key, value);
@@ -495,6 +448,49 @@ return /******/ (function(modules) { // webpackBootstrap
 									value: function remove() {
 										return thisGraph.removeExistingEdge(this.key);
 									}
+								}, {
+									key: "length",
+									get: function get() {
+										return 2;
+									}
+								}, {
+									key: "graph",
+									get: function get() {
+										return thisGraph;
+									}
+								}, {
+									key: "key",
+									get: function get() {
+										return this[0];
+									}
+								}, {
+									key: "from",
+									get: function get() {
+										return this[0][0];
+									}
+								}, {
+									key: "to",
+									get: function get() {
+										return this[0][1];
+									}
+								}, {
+									key: "value",
+									get: function get() {
+										return this[1];
+									},
+									set: function set(value) {
+										return this.set(value);
+									}
+								}, {
+									key: "source",
+									get: function get() {
+										return this._source;
+									}
+								}, {
+									key: "target",
+									get: function get() {
+										return this._target;
+									}
 								}]);
 	
 								return Edge;
@@ -502,24 +498,24 @@ return /******/ (function(modules) { // webpackBootstrap
 						})();
 					}
 				}
-			}, {
-				key: "addNewVertex",
 	
 				////////////////////////////////////////
 				////////// Overriding Methods //////////
 				////////////////////////////////////////
 	
+			}, {
+				key: "addNewVertex",
 				value: function addNewVertex(key, value) {
 					this[_init]();
 	
-					var _Graph$_extractTwoArgs = Graph[_options$_extractTwoArgs$_extractThreeArgs$_expectVertices$_expectVerticesAbsent$_expectEdges$_expectEdgesAbsent$_expectNoConnectedEdges._extractTwoArgs](key, value);
+					var _Graph$_extractTwoArgs = Graph[_privateEs6Js._extractTwoArgs](key, value);
 	
 					var _Graph$_extractTwoArgs2 = _slicedToArray(_Graph$_extractTwoArgs, 2);
 	
 					key = _Graph$_extractTwoArgs2[0];
 					value = _Graph$_extractTwoArgs2[1];
 	
-					this[_options$_extractTwoArgs$_extractThreeArgs$_expectVertices$_expectVerticesAbsent$_expectEdges$_expectEdgesAbsent$_expectNoConnectedEdges._expectVerticesAbsent](key);
+					this[_privateEs6Js._expectVerticesAbsent](key);
 					if (!this[_vertexObjects].has(key)) {
 						this[_vertexObjects].set(key, null);
 						this[_vertexObjects].set(key, new this.Vertex(key, value));
@@ -532,14 +528,14 @@ return /******/ (function(modules) { // webpackBootstrap
 				value: function setVertex(key, value) {
 					this[_init]();
 	
-					var _Graph$_extractTwoArgs3 = Graph[_options$_extractTwoArgs$_extractThreeArgs$_expectVertices$_expectVerticesAbsent$_expectEdges$_expectEdgesAbsent$_expectNoConnectedEdges._extractTwoArgs](key, value);
+					var _Graph$_extractTwoArgs3 = Graph[_privateEs6Js._extractTwoArgs](key, value);
 	
 					var _Graph$_extractTwoArgs32 = _slicedToArray(_Graph$_extractTwoArgs3, 2);
 	
 					key = _Graph$_extractTwoArgs32[0];
 					value = _Graph$_extractTwoArgs32[1];
 	
-					this[_options$_extractTwoArgs$_extractThreeArgs$_expectVertices$_expectVerticesAbsent$_expectEdges$_expectEdgesAbsent$_expectNoConnectedEdges._expectVertices](key);
+					this[_privateEs6Js._expectVertices](key);
 					this[_vertexObjects].get(key)[1] = value;
 					return _get(Object.getPrototypeOf(GraphOO.prototype), "setVertex", this).call(this, key, value);
 				}
@@ -547,8 +543,8 @@ return /******/ (function(modules) { // webpackBootstrap
 				key: "removeExistingVertex",
 				value: function removeExistingVertex(key) {
 					this[_init]();
-					this[_options$_extractTwoArgs$_extractThreeArgs$_expectVertices$_expectVerticesAbsent$_expectEdges$_expectEdgesAbsent$_expectNoConnectedEdges._expectVertices](key);
-					this[_options$_extractTwoArgs$_extractThreeArgs$_expectVertices$_expectVerticesAbsent$_expectEdges$_expectEdgesAbsent$_expectNoConnectedEdges._expectNoConnectedEdges](key);
+					this[_privateEs6Js._expectVertices](key);
+					this[_privateEs6Js._expectNoConnectedEdges](key);
 					this[_vertexObjects]["delete"](key);
 					return _get(Object.getPrototypeOf(GraphOO.prototype), "removeExistingVertex", this).call(this, key);
 				}
@@ -556,7 +552,7 @@ return /******/ (function(modules) { // webpackBootstrap
 				key: "vertex",
 				value: function vertex(key) {
 					this[_init]();
-					this[_options$_extractTwoArgs$_extractThreeArgs$_expectVertices$_expectVerticesAbsent$_expectEdges$_expectEdgesAbsent$_expectNoConnectedEdges._expectVertices](key);
+					this[_privateEs6Js._expectVertices](key);
 					return this[_vertexObjects].get(key);
 				}
 			}, {
@@ -564,7 +560,7 @@ return /******/ (function(modules) { // webpackBootstrap
 				value: function addNewEdge(from, to, value) {
 					this[_init]();
 	
-					var _Graph$_extractThreeArgs = Graph[_options$_extractTwoArgs$_extractThreeArgs$_expectVertices$_expectVerticesAbsent$_expectEdges$_expectEdgesAbsent$_expectNoConnectedEdges._extractThreeArgs](from, to, value);
+					var _Graph$_extractThreeArgs = Graph[_privateEs6Js._extractThreeArgs](from, to, value);
 	
 					var _Graph$_extractThreeArgs2 = _slicedToArray(_Graph$_extractThreeArgs, 3);
 	
@@ -572,8 +568,8 @@ return /******/ (function(modules) { // webpackBootstrap
 					to = _Graph$_extractThreeArgs2[1];
 					value = _Graph$_extractThreeArgs2[2];
 	
-					this[_options$_extractTwoArgs$_extractThreeArgs$_expectVertices$_expectVerticesAbsent$_expectEdges$_expectEdgesAbsent$_expectNoConnectedEdges._expectEdgesAbsent]([from, to]);
-					this[_options$_extractTwoArgs$_extractThreeArgs$_expectVertices$_expectVerticesAbsent$_expectEdges$_expectEdgesAbsent$_expectNoConnectedEdges._expectVertices](from, to);
+					this[_privateEs6Js._expectEdgesAbsent]([from, to]);
+					this[_privateEs6Js._expectVertices](from, to);
 					if (!this[_edgeObjects].get(from).has(to)) {
 						this[_edgeObjects].get(from).set(to, null);
 						this[_edgeObjects].get(from).set(to, new this.Edge(from, to, value));
@@ -585,7 +581,7 @@ return /******/ (function(modules) { // webpackBootstrap
 				value: function setEdge(from, to, value) {
 					this[_init]();
 	
-					var _Graph$_extractThreeArgs3 = Graph[_options$_extractTwoArgs$_extractThreeArgs$_expectVertices$_expectVerticesAbsent$_expectEdges$_expectEdgesAbsent$_expectNoConnectedEdges._extractThreeArgs](from, to, value);
+					var _Graph$_extractThreeArgs3 = Graph[_privateEs6Js._extractThreeArgs](from, to, value);
 	
 					var _Graph$_extractThreeArgs32 = _slicedToArray(_Graph$_extractThreeArgs3, 3);
 	
@@ -593,7 +589,7 @@ return /******/ (function(modules) { // webpackBootstrap
 					to = _Graph$_extractThreeArgs32[1];
 					value = _Graph$_extractThreeArgs32[2];
 	
-					this[_options$_extractTwoArgs$_extractThreeArgs$_expectVertices$_expectVerticesAbsent$_expectEdges$_expectEdgesAbsent$_expectNoConnectedEdges._expectEdges]([from, to]);
+					this[_privateEs6Js._expectEdges]([from, to]);
 					this[_edgeObjects].get(from).get(to)[1] = value;
 					return _get(Object.getPrototypeOf(GraphOO.prototype), "setEdge", this).call(this, from, to, value);
 				}
@@ -602,14 +598,14 @@ return /******/ (function(modules) { // webpackBootstrap
 				value: function removeExistingEdge(from, to) {
 					this[_init]();
 	
-					var _Graph$_extractTwoArgs4 = Graph[_options$_extractTwoArgs$_extractThreeArgs$_expectVertices$_expectVerticesAbsent$_expectEdges$_expectEdgesAbsent$_expectNoConnectedEdges._extractTwoArgs](from, to);
+					var _Graph$_extractTwoArgs4 = Graph[_privateEs6Js._extractTwoArgs](from, to);
 	
 					var _Graph$_extractTwoArgs42 = _slicedToArray(_Graph$_extractTwoArgs4, 2);
 	
 					from = _Graph$_extractTwoArgs42[0];
 					to = _Graph$_extractTwoArgs42[1];
 	
-					this[_options$_extractTwoArgs$_extractThreeArgs$_expectVertices$_expectVerticesAbsent$_expectEdges$_expectEdgesAbsent$_expectNoConnectedEdges._expectEdges]([from, to]);
+					this[_privateEs6Js._expectEdges]([from, to]);
 					this[_edgeObjects].get(from)["delete"](to);
 					return _get(Object.getPrototypeOf(GraphOO.prototype), "removeExistingEdge", this).call(this, from, to);
 				}
@@ -618,14 +614,14 @@ return /******/ (function(modules) { // webpackBootstrap
 				value: function edge(from, to) {
 					this[_init]();
 	
-					var _Graph$_extractTwoArgs5 = Graph[_options$_extractTwoArgs$_extractThreeArgs$_expectVertices$_expectVerticesAbsent$_expectEdges$_expectEdgesAbsent$_expectNoConnectedEdges._extractTwoArgs](from, to);
+					var _Graph$_extractTwoArgs5 = Graph[_privateEs6Js._extractTwoArgs](from, to);
 	
 					var _Graph$_extractTwoArgs52 = _slicedToArray(_Graph$_extractTwoArgs5, 2);
 	
 					from = _Graph$_extractTwoArgs52[0];
 					to = _Graph$_extractTwoArgs52[1];
 	
-					this[_options$_extractTwoArgs$_extractThreeArgs$_expectVertices$_expectVerticesAbsent$_expectEdges$_expectEdgesAbsent$_expectNoConnectedEdges._expectEdges]([from, to]);
+					this[_privateEs6Js._expectEdges]([from, to]);
 					return this[_edgeObjects].get(from).get(to);
 				}
 			}]);
@@ -636,7 +632,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	module.exports = exports["default"];
 
-/***/ }
+/***/ })
 
 /******/ })
 });

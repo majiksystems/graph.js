@@ -3,7 +3,7 @@ module.exports = {
 	devtool: 'source-map',
 	entry: {
 		'graph':                  ['./src/graph.es6.js'],
-		'graph.full':             [ 'babel-core/polyfill.js', './src/graph.es6.js' ],
+		'graph.full':             [ 'babel-polyfill', './src/graph.es6.js' ],
 		'addGraphOO':             ['./src/addGraphOO.es6.js'],
 		'vertices_topologically': ['./src/vertices_topologically.es6.js']
 	},

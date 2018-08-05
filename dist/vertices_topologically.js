@@ -2,7 +2,7 @@
 	if(typeof exports === 'object' && typeof module === 'object')
 		module.exports = factory();
 	else if(typeof define === 'function' && define.amd)
-		define(factory);
+		define([], factory);
 	else if(typeof exports === 'object')
 		exports["Graph"] = factory();
 	else
@@ -53,21 +53,16 @@ return /******/ (function(modules) { // webpackBootstrap
 /******/ ({
 
 /***/ 0:
-/***/ function(module, exports, __webpack_require__) {
+/***/ (function(module, exports, __webpack_require__) {
 
-	module.exports = __webpack_require__(91);
+	module.exports = __webpack_require__(128);
 
 
-/***/ },
+/***/ }),
 
-/***/ 91:
-/***/ function(module, exports, __webpack_require__) {
+/***/ 128:
+/***/ (function(module, exports) {
 
-	"use strict";
-	
-	Object.defineProperty(exports, "__esModule", {
-		value: true
-	});
 	/**
 	 * Iterate over all vertices of a graph in topological order.
 	 * @param graph {Graph} the graph to iterate over;
@@ -86,10 +81,16 @@ return /******/ (function(modules) { // webpackBootstrap
 	 *     // iterates over all vertices of the graph in topological order
 	 * }
 	 */
+	"use strict";
+	
+	Object.defineProperty(exports, "__esModule", {
+		value: true
+	});
+	
+	var _slicedToArray = (function () { function sliceIterator(arr, i) { var _arr = []; var _n = true; var _d = false; var _e = undefined; try { for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"]) _i["return"](); } finally { if (_d) throw _e; } } return _arr; } return function (arr, i) { if (Array.isArray(arr)) { return arr; } else if (Symbol.iterator in Object(arr)) { return sliceIterator(arr, i); } else { throw new TypeError("Invalid attempt to destructure non-iterable instance"); } }; })();
+	
 	exports["default"] = vertices_topologically;
 	var marked0$0 = [vertices_topologically].map(regeneratorRuntime.mark);
-	
-	function _slicedToArray(arr, i) { if (Array.isArray(arr)) { return arr; } else if (Symbol.iterator in Object(arr)) { var _arr = []; var _n = true; var _d = false; var _e = undefined; try { for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"]) _i["return"](); } finally { if (_d) throw _e; } } return _arr; } else { throw new TypeError("Invalid attempt to destructure non-iterable instance"); } }
 	
 	function vertices_topologically(graph) {
 		var marked1$0, visited, handled, visit, _iteratorNormalCompletion2, _didIteratorError2, _iteratorError2, _iterator2, _step2, _step2$value, key;
@@ -134,7 +135,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 									_step$value = _slicedToArray(_step.value, 1);
 									nextKey = _step$value[0];
-									return context$2$0.delegateYield(visit(nextKey), "t19", 15);
+									return context$2$0.delegateYield(visit(nextKey), "t0", 15);
 	
 								case 15:
 									_iteratorNormalCompletion = true;
@@ -147,9 +148,9 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 								case 20:
 									context$2$0.prev = 20;
-									context$2$0.t20 = context$2$0["catch"](9);
+									context$2$0.t1 = context$2$0["catch"](9);
 									_didIteratorError = true;
-									_iteratorError = context$2$0.t20;
+									_iteratorError = context$2$0.t1;
 	
 								case 24:
 									context$2$0.prev = 24;
@@ -220,7 +221,7 @@ return /******/ (function(modules) { // webpackBootstrap
 						break;
 					}
 	
-					return context$1$0.delegateYield(visit(key), "t21", 14);
+					return context$1$0.delegateYield(visit(key), "t0", 14);
 	
 				case 14:
 					_iteratorNormalCompletion2 = true;
@@ -233,9 +234,9 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 				case 19:
 					context$1$0.prev = 19;
-					context$1$0.t22 = context$1$0["catch"](7);
+					context$1$0.t1 = context$1$0["catch"](7);
 					_didIteratorError2 = true;
-					_iteratorError2 = context$1$0.t22;
+					_iteratorError2 = context$1$0.t1;
 	
 				case 23:
 					context$1$0.prev = 23;
@@ -272,7 +273,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	module.exports = exports["default"];
 	// stack
 
-/***/ }
+/***/ })
 
 /******/ })
 });

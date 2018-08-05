@@ -2,7 +2,7 @@
 	if(typeof exports === 'object' && typeof module === 'object')
 		module.exports = factory();
 	else if(typeof define === 'function' && define.amd)
-		define(factory);
+		define([], factory);
 	else if(typeof exports === 'object')
 		exports["Graph"] = factory();
 	else
@@ -53,25 +53,25 @@ return /******/ (function(modules) { // webpackBootstrap
 /******/ ({
 
 /***/ 0:
-/***/ function(module, exports, __webpack_require__) {
+/***/ (function(module, exports, __webpack_require__) {
 
-	module.exports = __webpack_require__(22);
+	module.exports = __webpack_require__(66);
 
 
-/***/ },
+/***/ }),
 
-/***/ 11:
-/***/ function(module, exports, __webpack_require__) {
+/***/ 47:
+/***/ (function(module, exports) {
 
+	//  ////////////////////////////////////////////////////////////////////////////////////////////////
+	//  // Symbols for private members /////////////////////////////////////////////////////////////////
+	//  ////////////////////////////////////////////////////////////////////////////////////////////////
+	
 	"use strict";
 	
 	Object.defineProperty(exports, "__esModule", {
 		value: true
 	});
-	//  ////////////////////////////////////////////////////////////////////////////////////////////////
-	//  // Symbols for private members /////////////////////////////////////////////////////////////////
-	//  ////////////////////////////////////////////////////////////////////////////////////////////////
-	
 	window.__graphjs__private__ = window.__graphjs__private__ || {};
 	
 	var _options = window.__graphjs__private__._options || Symbol("options");
@@ -147,10 +147,10 @@ return /******/ (function(modules) { // webpackBootstrap
 		_expectNoConnectedEdges: _expectNoConnectedEdges
 	});
 
-/***/ },
+/***/ }),
 
-/***/ 22:
-/***/ function(module, exports, __webpack_require__) {
+/***/ 66:
+/***/ (function(module, exports, __webpack_require__) {
 
 	'use strict';
 	
@@ -159,23 +159,21 @@ return /******/ (function(modules) { // webpackBootstrap
 	});
 	var _bind = Function.prototype.bind;
 	
-	var _get = function get(_x11, _x12, _x13) { var _again = true; _function: while (_again) { desc = parent = getter = undefined; _again = false; var object = _x11,
-	    property = _x12,
-	    receiver = _x13; var desc = Object.getOwnPropertyDescriptor(object, property); if (desc === undefined) { var parent = Object.getPrototypeOf(object); if (parent === null) { return undefined; } else { _x11 = parent; _x12 = property; _x13 = receiver; _again = true; continue _function; } } else if ('value' in desc) { return desc.value; } else { var getter = desc.get; if (getter === undefined) { return undefined; } return getter.call(receiver); } } };
+	var _slicedToArray = (function () { function sliceIterator(arr, i) { var _arr = []; var _n = true; var _d = false; var _e = undefined; try { for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i['return']) _i['return'](); } finally { if (_d) throw _e; } } return _arr; } return function (arr, i) { if (Array.isArray(arr)) { return arr; } else if (Symbol.iterator in Object(arr)) { return sliceIterator(arr, i); } else { throw new TypeError('Invalid attempt to destructure non-iterable instance'); } }; })();
+	
+	var _get = function get(_x11, _x12, _x13) { var _again = true; _function: while (_again) { var object = _x11, property = _x12, receiver = _x13; _again = false; if (object === null) object = Function.prototype; var desc = Object.getOwnPropertyDescriptor(object, property); if (desc === undefined) { var parent = Object.getPrototypeOf(object); if (parent === null) { return undefined; } else { _x11 = parent; _x12 = property; _x13 = receiver; _again = true; desc = parent = undefined; continue _function; } } else if ('value' in desc) { return desc.value; } else { var getter = desc.get; if (getter === undefined) { return undefined; } return getter.call(receiver); } } };
 	
 	var _createClass = (function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ('value' in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; })();
 	
-	function _slicedToArray(arr, i) { if (Array.isArray(arr)) { return arr; } else if (Symbol.iterator in Object(arr)) { var _arr = []; var _n = true; var _d = false; var _e = undefined; try { for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i['return']) _i['return'](); } finally { if (_d) throw _e; } } return _arr; } else { throw new TypeError('Invalid attempt to destructure non-iterable instance'); } }
-	
 	function _toConsumableArray(arr) { if (Array.isArray(arr)) { for (var i = 0, arr2 = Array(arr.length); i < arr.length; i++) arr2[i] = arr[i]; return arr2; } else { return Array.from(arr); } }
 	
-	function _defineProperty(obj, key, value) { return Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); }
+	function _inherits(subClass, superClass) { if (typeof superClass !== 'function' && superClass !== null) { throw new TypeError('Super expression must either be null or a function, not ' + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 	
-	function _inherits(subClass, superClass) { if (typeof superClass !== 'function' && superClass !== null) { throw new TypeError('Super expression must either be null or a function, not ' + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) subClass.__proto__ = superClass; }
+	function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 	
 	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError('Cannot call a class as a function'); } }
 	
-	var _options$_vertices$_edges$_reverseEdges$_sources$_sinks$_edgeCount$_listeners$_extractTwoArgs$_extractThreeArgs$_trigger$_verticesFrom$_verticesTo$_edgesFrom$_edgesTo$_verticesWithPathTo$_verticesWithPathFrom$_paths$_expectVertices$_expectVerticesAbsent$_expectEdges$_expectEdgesAbsent$_expectNoConnectedEdges = __webpack_require__(11);
+	var _privateEs6Js = __webpack_require__(47);
 	
 	//  ////////////////////////////////////////////////////////////////////////////////////////////////
 	//  // JSDoc stuff /////////////////////////////////////////////////////////////////////////////////
@@ -216,39 +214,41 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	var Graph = (function () {
 		function Graph() {
-			for (var _len = arguments.length, parts = Array(_len), _key = 0; _key < _len; _key++) {
-				parts[_key] = arguments[_key];
-			}
-	
 			_classCallCheck(this, Graph);
 	
 			/* storage */
-			this[_options$_vertices$_edges$_reverseEdges$_sources$_sinks$_edgeCount$_listeners$_extractTwoArgs$_extractThreeArgs$_trigger$_verticesFrom$_verticesTo$_edgesFrom$_edgesTo$_verticesWithPathTo$_verticesWithPathFrom$_paths$_expectVertices$_expectVerticesAbsent$_expectEdges$_expectEdgesAbsent$_expectNoConnectedEdges._vertices] = new Map(); // Map.< string, * >
-			this[_options$_vertices$_edges$_reverseEdges$_sources$_sinks$_edgeCount$_listeners$_extractTwoArgs$_extractThreeArgs$_trigger$_verticesFrom$_verticesTo$_edgesFrom$_edgesTo$_verticesWithPathTo$_verticesWithPathFrom$_paths$_expectVertices$_expectVerticesAbsent$_expectEdges$_expectEdgesAbsent$_expectNoConnectedEdges._edges] = new Map(); // Map.< string, Map.<string, *> >
+			this[_privateEs6Js._vertices] = new Map(); // Map.< string, * >
+			this[_privateEs6Js._edges] = new Map(); // Map.< string, Map.<string, *> >
 	
 			/* bookkeeping */
-			this[_options$_vertices$_edges$_reverseEdges$_sources$_sinks$_edgeCount$_listeners$_extractTwoArgs$_extractThreeArgs$_trigger$_verticesFrom$_verticesTo$_edgesFrom$_edgesTo$_verticesWithPathTo$_verticesWithPathFrom$_paths$_expectVertices$_expectVerticesAbsent$_expectEdges$_expectEdgesAbsent$_expectNoConnectedEdges._reverseEdges] = new Map(); // Map.< string, Set.<*> >
-			this[_options$_vertices$_edges$_reverseEdges$_sources$_sinks$_edgeCount$_listeners$_extractTwoArgs$_extractThreeArgs$_trigger$_verticesFrom$_verticesTo$_edgesFrom$_edgesTo$_verticesWithPathTo$_verticesWithPathFrom$_paths$_expectVertices$_expectVerticesAbsent$_expectEdges$_expectEdgesAbsent$_expectNoConnectedEdges._sources] = new Set(); // Set.< string >
-			this[_options$_vertices$_edges$_reverseEdges$_sources$_sinks$_edgeCount$_listeners$_extractTwoArgs$_extractThreeArgs$_trigger$_verticesFrom$_verticesTo$_edgesFrom$_edgesTo$_verticesWithPathTo$_verticesWithPathFrom$_paths$_expectVertices$_expectVerticesAbsent$_expectEdges$_expectEdgesAbsent$_expectNoConnectedEdges._sinks] = new Set(); // Set.< string >
-			this[_options$_vertices$_edges$_reverseEdges$_sources$_sinks$_edgeCount$_listeners$_extractTwoArgs$_extractThreeArgs$_trigger$_verticesFrom$_verticesTo$_edgesFrom$_edgesTo$_verticesWithPathTo$_verticesWithPathFrom$_paths$_expectVertices$_expectVerticesAbsent$_expectEdges$_expectEdgesAbsent$_expectNoConnectedEdges._edgeCount] = 0;
+			this[_privateEs6Js._reverseEdges] = new Map(); // Map.< string, Set.<*> >
+			this[_privateEs6Js._sources] = new Set(); // Set.< string >
+			this[_privateEs6Js._sinks] = new Set(); // Set.< string >
+			this[_privateEs6Js._edgeCount] = 0;
 	
 			/* listeners */
-			this[_options$_vertices$_edges$_reverseEdges$_sources$_sinks$_edgeCount$_listeners$_extractTwoArgs$_extractThreeArgs$_trigger$_verticesFrom$_verticesTo$_edgesFrom$_edgesTo$_verticesWithPathTo$_verticesWithPathFrom$_paths$_expectVertices$_expectVerticesAbsent$_expectEdges$_expectEdgesAbsent$_expectNoConnectedEdges._listeners] = new Map();
+			this[_privateEs6Js._listeners] = new Map();
 	
 			/* graph options */
-			this[_options$_vertices$_edges$_reverseEdges$_sources$_sinks$_edgeCount$_listeners$_extractTwoArgs$_extractThreeArgs$_trigger$_verticesFrom$_verticesTo$_edgesFrom$_edgesTo$_verticesWithPathTo$_verticesWithPathFrom$_paths$_expectVertices$_expectVerticesAbsent$_expectEdges$_expectEdgesAbsent$_expectNoConnectedEdges._options] = {};
+			this[_privateEs6Js._options] = {};
 			var _iteratorNormalCompletion = true;
 			var _didIteratorError = false;
 			var _iteratorError = undefined;
+	
+			for (var _len = arguments.length, parts = Array(_len), _key = 0; _key < _len; _key++) {
+				parts[_key] = arguments[_key];
+			}
 	
 			try {
 				for (var _iterator = parts[Symbol.iterator](), _step; !(_iteratorNormalCompletion = (_step = _iterator.next()).done); _iteratorNormalCompletion = true) {
 					var part = _step.value;
 	
 					if (!(part instanceof Array) && part instanceof Object) {
-						Object.assign(this[_options$_vertices$_edges$_reverseEdges$_sources$_sinks$_edgeCount$_listeners$_extractTwoArgs$_extractThreeArgs$_trigger$_verticesFrom$_verticesTo$_edgesFrom$_edgesTo$_verticesWithPathTo$_verticesWithPathFrom$_paths$_expectVertices$_expectVerticesAbsent$_expectEdges$_expectEdgesAbsent$_expectNoConnectedEdges._options], part);
+						Object.assign(this[_privateEs6Js._options], part);
 					}
 				}
+	
+				/* add vertices and values from constructor arguments */
 			} catch (err) {
 				_didIteratorError = true;
 				_iteratorError = err;
@@ -264,7 +264,6 @@ return /******/ (function(modules) { // webpackBootstrap
 				}
 			}
 	
-			/* add vertices and values from constructor arguments */
 			var _iteratorNormalCompletion2 = true;
 			var _didIteratorError2 = false;
 			var _iteratorError2 = undefined;
@@ -304,6 +303,20 @@ return /******/ (function(modules) { // webpackBootstrap
 			}
 		}
 	
+		//  ////////////////////////////////////////////////////////////////////////////////////////////////
+		//  // Errors //////////////////////////////////////////////////////////////////////////////////////
+		//  ////////////////////////////////////////////////////////////////////////////////////////////////
+	
+		/**
+	  * @class
+	  * @classdesc This type of error is thrown when specific vertices are expected not to exist, but do.
+	  * @extends Error
+	  */
+	
+		////////////////////////////////////////////////////////
+		////////// Static private convenience methods //////////
+		////////////////////////////////////////////////////////
+	
 		_createClass(Graph, [{
 			key: 'on',
 	
@@ -317,36 +330,36 @@ return /******/ (function(modules) { // webpackBootstrap
 	   * @param handler {Function} the function to call for each such event fired, receiving its corresponding value
 	   */
 			value: function on(event, handler) {
-				if (!this[_options$_vertices$_edges$_reverseEdges$_sources$_sinks$_edgeCount$_listeners$_extractTwoArgs$_extractThreeArgs$_trigger$_verticesFrom$_verticesTo$_edgesFrom$_edgesTo$_verticesWithPathTo$_verticesWithPathFrom$_paths$_expectVertices$_expectVerticesAbsent$_expectEdges$_expectEdgesAbsent$_expectNoConnectedEdges._listeners].has(event)) {
-					this[_options$_vertices$_edges$_reverseEdges$_sources$_sinks$_edgeCount$_listeners$_extractTwoArgs$_extractThreeArgs$_trigger$_verticesFrom$_verticesTo$_edgesFrom$_edgesTo$_verticesWithPathTo$_verticesWithPathFrom$_paths$_expectVertices$_expectVerticesAbsent$_expectEdges$_expectEdgesAbsent$_expectNoConnectedEdges._listeners].set(event, new Set());
+				if (!this[_privateEs6Js._listeners].has(event)) {
+					this[_privateEs6Js._listeners].set(event, new Set());
 				}
-				this[_options$_vertices$_edges$_reverseEdges$_sources$_sinks$_edgeCount$_listeners$_extractTwoArgs$_extractThreeArgs$_trigger$_verticesFrom$_verticesTo$_edgesFrom$_edgesTo$_verticesWithPathTo$_verticesWithPathFrom$_paths$_expectVertices$_expectVerticesAbsent$_expectEdges$_expectEdgesAbsent$_expectNoConnectedEdges._listeners].get(event).add(handler);
+				this[_privateEs6Js._listeners].get(event).add(handler);
 			}
-		}, {
-			key: 'off',
 	
 			/**
 	   * Deregister a previously registered event handler.
 	   * @param event   {string}   the event used to originally register a handler
 	   * @param handler {Function} the handler originally registered
 	   */
+		}, {
+			key: 'off',
 			value: function off(event, handler) {
-				if (this[_options$_vertices$_edges$_reverseEdges$_sources$_sinks$_edgeCount$_listeners$_extractTwoArgs$_extractThreeArgs$_trigger$_verticesFrom$_verticesTo$_edgesFrom$_edgesTo$_verticesWithPathTo$_verticesWithPathFrom$_paths$_expectVertices$_expectVerticesAbsent$_expectEdges$_expectEdgesAbsent$_expectNoConnectedEdges._listeners].has(event)) {
-					this[_options$_vertices$_edges$_reverseEdges$_sources$_sinks$_edgeCount$_listeners$_extractTwoArgs$_extractThreeArgs$_trigger$_verticesFrom$_verticesTo$_edgesFrom$_edgesTo$_verticesWithPathTo$_verticesWithPathFrom$_paths$_expectVertices$_expectVerticesAbsent$_expectEdges$_expectEdgesAbsent$_expectNoConnectedEdges._listeners].get(event)['delete'](handler);
+				if (this[_privateEs6Js._listeners].has(event)) {
+					this[_privateEs6Js._listeners].get(event)['delete'](handler);
 				}
 			}
 		}, {
-			key: _options$_vertices$_edges$_reverseEdges$_sources$_sinks$_edgeCount$_listeners$_extractTwoArgs$_extractThreeArgs$_trigger$_verticesFrom$_verticesTo$_edgesFrom$_edgesTo$_verticesWithPathTo$_verticesWithPathFrom$_paths$_expectVertices$_expectVerticesAbsent$_expectEdges$_expectEdgesAbsent$_expectNoConnectedEdges._trigger,
-			value: function (event, value) {
+			key: _privateEs6Js._trigger,
+			value: function value(event, _value) {
 				var _iteratorNormalCompletion3 = true;
 				var _didIteratorError3 = false;
 				var _iteratorError3 = undefined;
 	
 				try {
-					for (var _iterator3 = (this[_options$_vertices$_edges$_reverseEdges$_sources$_sinks$_edgeCount$_listeners$_extractTwoArgs$_extractThreeArgs$_trigger$_verticesFrom$_verticesTo$_edgesFrom$_edgesTo$_verticesWithPathTo$_verticesWithPathFrom$_paths$_expectVertices$_expectVerticesAbsent$_expectEdges$_expectEdgesAbsent$_expectNoConnectedEdges._listeners].get(event) || [])[Symbol.iterator](), _step3; !(_iteratorNormalCompletion3 = (_step3 = _iterator3.next()).done); _iteratorNormalCompletion3 = true) {
+					for (var _iterator3 = (this[_privateEs6Js._listeners].get(event) || [])[Symbol.iterator](), _step3; !(_iteratorNormalCompletion3 = (_step3 = _iterator3.next()).done); _iteratorNormalCompletion3 = true) {
 						var handler = _step3.value;
 	
-						handler(value);
+						handler(_value);
 					}
 				} catch (err) {
 					_didIteratorError3 = true;
@@ -363,8 +376,6 @@ return /******/ (function(modules) { // webpackBootstrap
 					}
 				}
 			}
-		}, {
-			key: 'addNewVertex',
 	
 			/**
 	   * An event that is triggered just after a vertex is added to this graph.
@@ -435,25 +446,25 @@ return /******/ (function(modules) { // webpackBootstrap
 	   * @param  key    {string} the key with which to refer to this new vertex
 	   * @param [value] {*}      the value to store in this new vertex
 	   */ // TODO: allow [key, value] array to be given as argument in docs
+		}, {
+			key: 'addNewVertex',
 			value: function addNewVertex(key, value) {
-				var _Graph$_extractTwoArgs = Graph[_options$_vertices$_edges$_reverseEdges$_sources$_sinks$_edgeCount$_listeners$_extractTwoArgs$_extractThreeArgs$_trigger$_verticesFrom$_verticesTo$_edgesFrom$_edgesTo$_verticesWithPathTo$_verticesWithPathFrom$_paths$_expectVertices$_expectVerticesAbsent$_expectEdges$_expectEdgesAbsent$_expectNoConnectedEdges._extractTwoArgs](key, value);
+				var _Graph$_extractTwoArgs = Graph[_privateEs6Js._extractTwoArgs](key, value);
 	
 				var _Graph$_extractTwoArgs2 = _slicedToArray(_Graph$_extractTwoArgs, 2);
 	
 				key = _Graph$_extractTwoArgs2[0];
 				value = _Graph$_extractTwoArgs2[1];
 	
-				this[_options$_vertices$_edges$_reverseEdges$_sources$_sinks$_edgeCount$_listeners$_extractTwoArgs$_extractThreeArgs$_trigger$_verticesFrom$_verticesTo$_edgesFrom$_edgesTo$_verticesWithPathTo$_verticesWithPathFrom$_paths$_expectVertices$_expectVerticesAbsent$_expectEdges$_expectEdgesAbsent$_expectNoConnectedEdges._expectVerticesAbsent](key);
-				this[_options$_vertices$_edges$_reverseEdges$_sources$_sinks$_edgeCount$_listeners$_extractTwoArgs$_extractThreeArgs$_trigger$_verticesFrom$_verticesTo$_edgesFrom$_edgesTo$_verticesWithPathTo$_verticesWithPathFrom$_paths$_expectVertices$_expectVerticesAbsent$_expectEdges$_expectEdgesAbsent$_expectNoConnectedEdges._vertices].set(key, value);
-				this[_options$_vertices$_edges$_reverseEdges$_sources$_sinks$_edgeCount$_listeners$_extractTwoArgs$_extractThreeArgs$_trigger$_verticesFrom$_verticesTo$_edgesFrom$_edgesTo$_verticesWithPathTo$_verticesWithPathFrom$_paths$_expectVertices$_expectVerticesAbsent$_expectEdges$_expectEdgesAbsent$_expectNoConnectedEdges._edges].set(key, new Map());
-				this[_options$_vertices$_edges$_reverseEdges$_sources$_sinks$_edgeCount$_listeners$_extractTwoArgs$_extractThreeArgs$_trigger$_verticesFrom$_verticesTo$_edgesFrom$_edgesTo$_verticesWithPathTo$_verticesWithPathFrom$_paths$_expectVertices$_expectVerticesAbsent$_expectEdges$_expectEdgesAbsent$_expectNoConnectedEdges._reverseEdges].set(key, new Set());
-				this[_options$_vertices$_edges$_reverseEdges$_sources$_sinks$_edgeCount$_listeners$_extractTwoArgs$_extractThreeArgs$_trigger$_verticesFrom$_verticesTo$_edgesFrom$_edgesTo$_verticesWithPathTo$_verticesWithPathFrom$_paths$_expectVertices$_expectVerticesAbsent$_expectEdges$_expectEdgesAbsent$_expectNoConnectedEdges._sources].add(key);
-				this[_options$_vertices$_edges$_reverseEdges$_sources$_sinks$_edgeCount$_listeners$_extractTwoArgs$_extractThreeArgs$_trigger$_verticesFrom$_verticesTo$_edgesFrom$_edgesTo$_verticesWithPathTo$_verticesWithPathFrom$_paths$_expectVertices$_expectVerticesAbsent$_expectEdges$_expectEdgesAbsent$_expectNoConnectedEdges._sinks].add(key);
-				this[_options$_vertices$_edges$_reverseEdges$_sources$_sinks$_edgeCount$_listeners$_extractTwoArgs$_extractThreeArgs$_trigger$_verticesFrom$_verticesTo$_edgesFrom$_edgesTo$_verticesWithPathTo$_verticesWithPathFrom$_paths$_expectVertices$_expectVerticesAbsent$_expectEdges$_expectEdgesAbsent$_expectNoConnectedEdges._trigger]('vertex-added', this.vertex(key));
-				this[_options$_vertices$_edges$_reverseEdges$_sources$_sinks$_edgeCount$_listeners$_extractTwoArgs$_extractThreeArgs$_trigger$_verticesFrom$_verticesTo$_edgesFrom$_edgesTo$_verticesWithPathTo$_verticesWithPathFrom$_paths$_expectVertices$_expectVerticesAbsent$_expectEdges$_expectEdgesAbsent$_expectNoConnectedEdges._trigger]('vertex-modified', this.vertex(key));
+				this[_privateEs6Js._expectVerticesAbsent](key);
+				this[_privateEs6Js._vertices].set(key, value);
+				this[_privateEs6Js._edges].set(key, new Map());
+				this[_privateEs6Js._reverseEdges].set(key, new Set());
+				this[_privateEs6Js._sources].add(key);
+				this[_privateEs6Js._sinks].add(key);
+				this[_privateEs6Js._trigger]('vertex-added', this.vertex(key));
+				this[_privateEs6Js._trigger]('vertex-modified', this.vertex(key));
 			}
-		}, {
-			key: 'setVertex',
 	
 			/**
 	   * Set the value of an existing vertex in this graph.
@@ -461,20 +472,20 @@ return /******/ (function(modules) { // webpackBootstrap
 	   * @param  key    {string} the key belonging to the vertex
 	   * @param [value] {*}      the value to store in this vertex
 	   */ // TODO: allow [key, value] array to be given as argument in docs
+		}, {
+			key: 'setVertex',
 			value: function setVertex(key, value) {
-				var _Graph$_extractTwoArgs3 = Graph[_options$_vertices$_edges$_reverseEdges$_sources$_sinks$_edgeCount$_listeners$_extractTwoArgs$_extractThreeArgs$_trigger$_verticesFrom$_verticesTo$_edgesFrom$_edgesTo$_verticesWithPathTo$_verticesWithPathFrom$_paths$_expectVertices$_expectVerticesAbsent$_expectEdges$_expectEdgesAbsent$_expectNoConnectedEdges._extractTwoArgs](key, value);
+				var _Graph$_extractTwoArgs3 = Graph[_privateEs6Js._extractTwoArgs](key, value);
 	
 				var _Graph$_extractTwoArgs32 = _slicedToArray(_Graph$_extractTwoArgs3, 2);
 	
 				key = _Graph$_extractTwoArgs32[0];
 				value = _Graph$_extractTwoArgs32[1];
 	
-				this[_options$_vertices$_edges$_reverseEdges$_sources$_sinks$_edgeCount$_listeners$_extractTwoArgs$_extractThreeArgs$_trigger$_verticesFrom$_verticesTo$_edgesFrom$_edgesTo$_verticesWithPathTo$_verticesWithPathFrom$_paths$_expectVertices$_expectVerticesAbsent$_expectEdges$_expectEdgesAbsent$_expectNoConnectedEdges._expectVertices](key);
-				this[_options$_vertices$_edges$_reverseEdges$_sources$_sinks$_edgeCount$_listeners$_extractTwoArgs$_extractThreeArgs$_trigger$_verticesFrom$_verticesTo$_edgesFrom$_edgesTo$_verticesWithPathTo$_verticesWithPathFrom$_paths$_expectVertices$_expectVerticesAbsent$_expectEdges$_expectEdgesAbsent$_expectNoConnectedEdges._vertices].set(key, value);
-				this[_options$_vertices$_edges$_reverseEdges$_sources$_sinks$_edgeCount$_listeners$_extractTwoArgs$_extractThreeArgs$_trigger$_verticesFrom$_verticesTo$_edgesFrom$_edgesTo$_verticesWithPathTo$_verticesWithPathFrom$_paths$_expectVertices$_expectVerticesAbsent$_expectEdges$_expectEdgesAbsent$_expectNoConnectedEdges._trigger]('vertex-modified', this.vertex(key));
+				this[_privateEs6Js._expectVertices](key);
+				this[_privateEs6Js._vertices].set(key, value);
+				this[_privateEs6Js._trigger]('vertex-modified', this.vertex(key));
 			}
-		}, {
-			key: 'ensureVertex',
 	
 			/**
 	   * Make sure a vertex with a specific key exists in this graph. If it already exists,
@@ -482,8 +493,10 @@ return /******/ (function(modules) { // webpackBootstrap
 	   * @param  key    {string} the key for the vertex
 	   * @param [value] {*}      the value to store if a new vertex is added
 	   */ // TODO: allow [key, value] array to be given as argument in docs
+		}, {
+			key: 'ensureVertex',
 			value: function ensureVertex(key, value) {
-				var _Graph$_extractTwoArgs4 = Graph[_options$_vertices$_edges$_reverseEdges$_sources$_sinks$_edgeCount$_listeners$_extractTwoArgs$_extractThreeArgs$_trigger$_verticesFrom$_verticesTo$_edgesFrom$_edgesTo$_verticesWithPathTo$_verticesWithPathFrom$_paths$_expectVertices$_expectVerticesAbsent$_expectEdges$_expectEdgesAbsent$_expectNoConnectedEdges._extractTwoArgs](key, value);
+				var _Graph$_extractTwoArgs4 = Graph[_privateEs6Js._extractTwoArgs](key, value);
 	
 				var _Graph$_extractTwoArgs42 = _slicedToArray(_Graph$_extractTwoArgs4, 2);
 	
@@ -494,8 +507,6 @@ return /******/ (function(modules) { // webpackBootstrap
 					this.addNewVertex(key, value);
 				}
 			}
-		}, {
-			key: 'addVertex',
 	
 			/**
 	   * Add a new vertex to this graph. If a vertex with this key already exists,
@@ -503,8 +514,10 @@ return /******/ (function(modules) { // webpackBootstrap
 	   * @param  key    {string} the key with which to refer to this new vertex
 	   * @param [value] {*}      the value to store in this new vertex
 	   */ // TODO: allow [key, value] array to be given as argument in docs
+		}, {
+			key: 'addVertex',
 			value: function addVertex(key, value) {
-				var _Graph$_extractTwoArgs5 = Graph[_options$_vertices$_edges$_reverseEdges$_sources$_sinks$_edgeCount$_listeners$_extractTwoArgs$_extractThreeArgs$_trigger$_verticesFrom$_verticesTo$_edgesFrom$_edgesTo$_verticesWithPathTo$_verticesWithPathFrom$_paths$_expectVertices$_expectVerticesAbsent$_expectEdges$_expectEdgesAbsent$_expectNoConnectedEdges._extractTwoArgs](key, value);
+				var _Graph$_extractTwoArgs5 = Graph[_privateEs6Js._extractTwoArgs](key, value);
 	
 				var _Graph$_extractTwoArgs52 = _slicedToArray(_Graph$_extractTwoArgs5, 2);
 	
@@ -517,8 +530,6 @@ return /******/ (function(modules) { // webpackBootstrap
 					this.addNewVertex(key, value);
 				}
 			}
-		}, {
-			key: 'removeExistingVertex',
 	
 			////////// removing them //////////
 	
@@ -528,24 +539,26 @@ return /******/ (function(modules) { // webpackBootstrap
 	   * @throws {Graph.HasConnectedEdgesError} if there are still edges connected to this vertex
 	   * @param key {string} the key of the vertex to remove
 	   */
-			value: function removeExistingVertex(key) {
-				this[_options$_vertices$_edges$_reverseEdges$_sources$_sinks$_edgeCount$_listeners$_extractTwoArgs$_extractThreeArgs$_trigger$_verticesFrom$_verticesTo$_edgesFrom$_edgesTo$_verticesWithPathTo$_verticesWithPathFrom$_paths$_expectVertices$_expectVerticesAbsent$_expectEdges$_expectEdgesAbsent$_expectNoConnectedEdges._expectVertices](key);
-				this[_options$_vertices$_edges$_reverseEdges$_sources$_sinks$_edgeCount$_listeners$_extractTwoArgs$_extractThreeArgs$_trigger$_verticesFrom$_verticesTo$_edgesFrom$_edgesTo$_verticesWithPathTo$_verticesWithPathFrom$_paths$_expectVertices$_expectVerticesAbsent$_expectEdges$_expectEdgesAbsent$_expectNoConnectedEdges._expectNoConnectedEdges](key);
-				this[_options$_vertices$_edges$_reverseEdges$_sources$_sinks$_edgeCount$_listeners$_extractTwoArgs$_extractThreeArgs$_trigger$_verticesFrom$_verticesTo$_edgesFrom$_edgesTo$_verticesWithPathTo$_verticesWithPathFrom$_paths$_expectVertices$_expectVerticesAbsent$_expectEdges$_expectEdgesAbsent$_expectNoConnectedEdges._vertices]['delete'](key);
-				this[_options$_vertices$_edges$_reverseEdges$_sources$_sinks$_edgeCount$_listeners$_extractTwoArgs$_extractThreeArgs$_trigger$_verticesFrom$_verticesTo$_edgesFrom$_edgesTo$_verticesWithPathTo$_verticesWithPathFrom$_paths$_expectVertices$_expectVerticesAbsent$_expectEdges$_expectEdgesAbsent$_expectNoConnectedEdges._sources]['delete'](key);
-				this[_options$_vertices$_edges$_reverseEdges$_sources$_sinks$_edgeCount$_listeners$_extractTwoArgs$_extractThreeArgs$_trigger$_verticesFrom$_verticesTo$_edgesFrom$_edgesTo$_verticesWithPathTo$_verticesWithPathFrom$_paths$_expectVertices$_expectVerticesAbsent$_expectEdges$_expectEdgesAbsent$_expectNoConnectedEdges._sinks]['delete'](key);
-				this[_options$_vertices$_edges$_reverseEdges$_sources$_sinks$_edgeCount$_listeners$_extractTwoArgs$_extractThreeArgs$_trigger$_verticesFrom$_verticesTo$_edgesFrom$_edgesTo$_verticesWithPathTo$_verticesWithPathFrom$_paths$_expectVertices$_expectVerticesAbsent$_expectEdges$_expectEdgesAbsent$_expectNoConnectedEdges._trigger]('vertex-removed', key);
-			}
 		}, {
-			key: 'destroyExistingVertex',
+			key: 'removeExistingVertex',
+			value: function removeExistingVertex(key) {
+				this[_privateEs6Js._expectVertices](key);
+				this[_privateEs6Js._expectNoConnectedEdges](key);
+				this[_privateEs6Js._vertices]['delete'](key);
+				this[_privateEs6Js._sources]['delete'](key);
+				this[_privateEs6Js._sinks]['delete'](key);
+				this[_privateEs6Js._trigger]('vertex-removed', key);
+			}
 	
 			/**
 	   * Remove an existing vertex from this graph, as well as all edges connected to it.
 	   * @throws {Graph.VertexNotExistsError} if a vertex with this key does not exist
 	   * @param key {string} the key of the vertex to remove
 	   */
+		}, {
+			key: 'destroyExistingVertex',
 			value: function destroyExistingVertex(key) {
-				this[_options$_vertices$_edges$_reverseEdges$_sources$_sinks$_edgeCount$_listeners$_extractTwoArgs$_extractThreeArgs$_trigger$_verticesFrom$_verticesTo$_edgesFrom$_edgesTo$_verticesWithPathTo$_verticesWithPathFrom$_paths$_expectVertices$_expectVerticesAbsent$_expectEdges$_expectEdgesAbsent$_expectNoConnectedEdges._expectVertices](key);
+				this[_privateEs6Js._expectVertices](key);
 				var _iteratorNormalCompletion4 = true;
 				var _didIteratorError4 = false;
 				var _iteratorError4 = undefined;
@@ -600,8 +613,6 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 				this.removeExistingVertex(key);
 			}
-		}, {
-			key: 'removeVertex',
 	
 			/**
 	   * Remove an existing vertex from this graph.
@@ -609,48 +620,48 @@ return /******/ (function(modules) { // webpackBootstrap
 	   * @throws {Graph.HasConnectedEdgesError} if there are still edges connected to this vertex
 	   * @param key {string} the key of the vertex to remove
 	   */
+		}, {
+			key: 'removeVertex',
 			value: function removeVertex(key) {
 				if (this.hasVertex(key)) {
 					this.removeExistingVertex(key);
 				}
 			}
-		}, {
-			key: 'destroyVertex',
 	
 			/**
 	   * Remove a vertex from this graph, as well as all edges connected to it.
 	   * If a vertex with this key does not exist, nothing happens.
 	   * @param key {string} the key of the vertex to remove
 	   */
+		}, {
+			key: 'destroyVertex',
 			value: function destroyVertex(key) {
 				if (this.hasVertex(key)) {
 					this.destroyExistingVertex(key);
 				}
 			}
-		}, {
-			key: 'vertexCount',
 	
 			////////// querying them //////////
 	
 			/**
 	   * @returns {number} the number of vertices in the whole graph
 	   */
-			value: function vertexCount() {
-				return this[_options$_vertices$_edges$_reverseEdges$_sources$_sinks$_edgeCount$_listeners$_extractTwoArgs$_extractThreeArgs$_trigger$_verticesFrom$_verticesTo$_edgesFrom$_edgesTo$_verticesWithPathTo$_verticesWithPathFrom$_paths$_expectVertices$_expectVerticesAbsent$_expectEdges$_expectEdgesAbsent$_expectNoConnectedEdges._vertices].size;
-			}
 		}, {
-			key: 'hasVertex',
+			key: 'vertexCount',
+			value: function vertexCount() {
+				return this[_privateEs6Js._vertices].size;
+			}
 	
 			/**
 	   * Ask whether a vertex with a given key exists.
 	   * @param key {string} the key to query
 	   * @returns {boolean} whether there is a vertex with the given key
 	   */
-			value: function hasVertex(key) {
-				return this[_options$_vertices$_edges$_reverseEdges$_sources$_sinks$_edgeCount$_listeners$_extractTwoArgs$_extractThreeArgs$_trigger$_verticesFrom$_verticesTo$_edgesFrom$_edgesTo$_verticesWithPathTo$_verticesWithPathFrom$_paths$_expectVertices$_expectVerticesAbsent$_expectEdges$_expectEdgesAbsent$_expectNoConnectedEdges._vertices].has(key);
-			}
 		}, {
-			key: 'vertex',
+			key: 'hasVertex',
+			value: function hasVertex(key) {
+				return this[_privateEs6Js._vertices].has(key);
+			}
 	
 			/**
 	   * Get the key/value pair representing the vertex with the given `key`.
@@ -658,12 +669,12 @@ return /******/ (function(modules) { // webpackBootstrap
 	   * @throws {Graph.VertexNotExistsError} if the `key` vertex does not exist in the graph
 	   * @returns {Array} a `[key, value]` shaped array representing the vertex
 	   */
+		}, {
+			key: 'vertex',
 			value: function vertex(key) {
-				this[_options$_vertices$_edges$_reverseEdges$_sources$_sinks$_edgeCount$_listeners$_extractTwoArgs$_extractThreeArgs$_trigger$_verticesFrom$_verticesTo$_edgesFrom$_edgesTo$_verticesWithPathTo$_verticesWithPathFrom$_paths$_expectVertices$_expectVerticesAbsent$_expectEdges$_expectEdgesAbsent$_expectNoConnectedEdges._expectVertices](key);
+				this[_privateEs6Js._expectVertices](key);
 				return [key, this.vertexValue(key)];
 			}
-		}, {
-			key: 'vertexValue',
 	
 			/**
 	   * Get the value associated with the vertex of a given `key`.
@@ -676,11 +687,11 @@ return /******/ (function(modules) { // webpackBootstrap
 	   *
 	   * Use {@link Graph#hasVertex} to distinguish these cases.
 	   */
-			value: function vertexValue(key) {
-				return this[_options$_vertices$_edges$_reverseEdges$_sources$_sinks$_edgeCount$_listeners$_extractTwoArgs$_extractThreeArgs$_trigger$_verticesFrom$_verticesTo$_edgesFrom$_edgesTo$_verticesWithPathTo$_verticesWithPathFrom$_paths$_expectVertices$_expectVerticesAbsent$_expectEdges$_expectEdgesAbsent$_expectNoConnectedEdges._vertices].get(key);
-			}
 		}, {
-			key: 'addNewEdge',
+			key: 'vertexValue',
+			value: function vertexValue(key) {
+				return this[_privateEs6Js._vertices].get(key);
+			}
 	
 			///////////////////////////
 			////////// Edges //////////
@@ -696,8 +707,10 @@ return /******/ (function(modules) { // webpackBootstrap
 	   * @param  to     {string} the key for the terminating vertex
 	   * @param [value] {*}      the value to store in this new edge
 	   */ // TODO: allow [from, to], value array to be given as argument in docss; or [[from, to], value] as single argument
+		}, {
+			key: 'addNewEdge',
 			value: function addNewEdge(from, to, value) {
-				var _Graph$_extractThreeArgs = Graph[_options$_vertices$_edges$_reverseEdges$_sources$_sinks$_edgeCount$_listeners$_extractTwoArgs$_extractThreeArgs$_trigger$_verticesFrom$_verticesTo$_edgesFrom$_edgesTo$_verticesWithPathTo$_verticesWithPathFrom$_paths$_expectVertices$_expectVerticesAbsent$_expectEdges$_expectEdgesAbsent$_expectNoConnectedEdges._extractThreeArgs](from, to, value);
+				var _Graph$_extractThreeArgs = Graph[_privateEs6Js._extractThreeArgs](from, to, value);
 	
 				var _Graph$_extractThreeArgs2 = _slicedToArray(_Graph$_extractThreeArgs, 3);
 	
@@ -705,18 +718,16 @@ return /******/ (function(modules) { // webpackBootstrap
 				to = _Graph$_extractThreeArgs2[1];
 				value = _Graph$_extractThreeArgs2[2];
 	
-				this[_options$_vertices$_edges$_reverseEdges$_sources$_sinks$_edgeCount$_listeners$_extractTwoArgs$_extractThreeArgs$_trigger$_verticesFrom$_verticesTo$_edgesFrom$_edgesTo$_verticesWithPathTo$_verticesWithPathFrom$_paths$_expectVertices$_expectVerticesAbsent$_expectEdges$_expectEdgesAbsent$_expectNoConnectedEdges._expectEdgesAbsent]([from, to]);
-				this[_options$_vertices$_edges$_reverseEdges$_sources$_sinks$_edgeCount$_listeners$_extractTwoArgs$_extractThreeArgs$_trigger$_verticesFrom$_verticesTo$_edgesFrom$_edgesTo$_verticesWithPathTo$_verticesWithPathFrom$_paths$_expectVertices$_expectVerticesAbsent$_expectEdges$_expectEdgesAbsent$_expectNoConnectedEdges._expectVertices](from, to);
-				this[_options$_vertices$_edges$_reverseEdges$_sources$_sinks$_edgeCount$_listeners$_extractTwoArgs$_extractThreeArgs$_trigger$_verticesFrom$_verticesTo$_edgesFrom$_edgesTo$_verticesWithPathTo$_verticesWithPathFrom$_paths$_expectVertices$_expectVerticesAbsent$_expectEdges$_expectEdgesAbsent$_expectNoConnectedEdges._edges].get(from).set(to, value);
-				this[_options$_vertices$_edges$_reverseEdges$_sources$_sinks$_edgeCount$_listeners$_extractTwoArgs$_extractThreeArgs$_trigger$_verticesFrom$_verticesTo$_edgesFrom$_edgesTo$_verticesWithPathTo$_verticesWithPathFrom$_paths$_expectVertices$_expectVerticesAbsent$_expectEdges$_expectEdgesAbsent$_expectNoConnectedEdges._reverseEdges].get(to).add(from);
-				this[_options$_vertices$_edges$_reverseEdges$_sources$_sinks$_edgeCount$_listeners$_extractTwoArgs$_extractThreeArgs$_trigger$_verticesFrom$_verticesTo$_edgesFrom$_edgesTo$_verticesWithPathTo$_verticesWithPathFrom$_paths$_expectVertices$_expectVerticesAbsent$_expectEdges$_expectEdgesAbsent$_expectNoConnectedEdges._edgeCount] += 1;
-				this[_options$_vertices$_edges$_reverseEdges$_sources$_sinks$_edgeCount$_listeners$_extractTwoArgs$_extractThreeArgs$_trigger$_verticesFrom$_verticesTo$_edgesFrom$_edgesTo$_verticesWithPathTo$_verticesWithPathFrom$_paths$_expectVertices$_expectVerticesAbsent$_expectEdges$_expectEdgesAbsent$_expectNoConnectedEdges._sources]['delete'](to);
-				this[_options$_vertices$_edges$_reverseEdges$_sources$_sinks$_edgeCount$_listeners$_extractTwoArgs$_extractThreeArgs$_trigger$_verticesFrom$_verticesTo$_edgesFrom$_edgesTo$_verticesWithPathTo$_verticesWithPathFrom$_paths$_expectVertices$_expectVerticesAbsent$_expectEdges$_expectEdgesAbsent$_expectNoConnectedEdges._sinks]['delete'](from);
-				this[_options$_vertices$_edges$_reverseEdges$_sources$_sinks$_edgeCount$_listeners$_extractTwoArgs$_extractThreeArgs$_trigger$_verticesFrom$_verticesTo$_edgesFrom$_edgesTo$_verticesWithPathTo$_verticesWithPathFrom$_paths$_expectVertices$_expectVerticesAbsent$_expectEdges$_expectEdgesAbsent$_expectNoConnectedEdges._trigger]('edge-added', this.edge(from, to));
-				this[_options$_vertices$_edges$_reverseEdges$_sources$_sinks$_edgeCount$_listeners$_extractTwoArgs$_extractThreeArgs$_trigger$_verticesFrom$_verticesTo$_edgesFrom$_edgesTo$_verticesWithPathTo$_verticesWithPathFrom$_paths$_expectVertices$_expectVerticesAbsent$_expectEdges$_expectEdgesAbsent$_expectNoConnectedEdges._trigger]('edge-modified', this.edge(from, to));
+				this[_privateEs6Js._expectEdgesAbsent]([from, to]);
+				this[_privateEs6Js._expectVertices](from, to);
+				this[_privateEs6Js._edges].get(from).set(to, value);
+				this[_privateEs6Js._reverseEdges].get(to).add(from);
+				this[_privateEs6Js._edgeCount] += 1;
+				this[_privateEs6Js._sources]['delete'](to);
+				this[_privateEs6Js._sinks]['delete'](from);
+				this[_privateEs6Js._trigger]('edge-added', this.edge(from, to));
+				this[_privateEs6Js._trigger]('edge-modified', this.edge(from, to));
 			}
-		}, {
-			key: 'createNewEdge',
 	
 			/**
 	   * Add a new edge to this graph. If the `from` and/or `to` vertices do not yet exist
@@ -726,8 +737,10 @@ return /******/ (function(modules) { // webpackBootstrap
 	   * @param  to     {string} the key for the terminating vertex
 	   * @param [value] {*}      the value to store in this new edge
 	   */ // TODO: allow [from, to], value array to be given as argument in docss; or [[from, to], value] as single argument
+		}, {
+			key: 'createNewEdge',
 			value: function createNewEdge(from, to, value) {
-				var _Graph$_extractThreeArgs3 = Graph[_options$_vertices$_edges$_reverseEdges$_sources$_sinks$_edgeCount$_listeners$_extractTwoArgs$_extractThreeArgs$_trigger$_verticesFrom$_verticesTo$_edgesFrom$_edgesTo$_verticesWithPathTo$_verticesWithPathFrom$_paths$_expectVertices$_expectVerticesAbsent$_expectEdges$_expectEdgesAbsent$_expectNoConnectedEdges._extractThreeArgs](from, to, value);
+				var _Graph$_extractThreeArgs3 = Graph[_privateEs6Js._extractThreeArgs](from, to, value);
 	
 				var _Graph$_extractThreeArgs32 = _slicedToArray(_Graph$_extractThreeArgs3, 3);
 	
@@ -735,13 +748,11 @@ return /******/ (function(modules) { // webpackBootstrap
 				to = _Graph$_extractThreeArgs32[1];
 				value = _Graph$_extractThreeArgs32[2];
 	
-				this[_options$_vertices$_edges$_reverseEdges$_sources$_sinks$_edgeCount$_listeners$_extractTwoArgs$_extractThreeArgs$_trigger$_verticesFrom$_verticesTo$_edgesFrom$_edgesTo$_verticesWithPathTo$_verticesWithPathFrom$_paths$_expectVertices$_expectVerticesAbsent$_expectEdges$_expectEdgesAbsent$_expectNoConnectedEdges._expectEdgesAbsent]([from, to]);
+				this[_privateEs6Js._expectEdgesAbsent]([from, to]);
 				this.ensureVertex(from);
 				this.ensureVertex(to);
 				this.addNewEdge(from, to, value);
 			}
-		}, {
-			key: 'setEdge',
 	
 			/**
 	   * Set the value of an existing edge in this graph.
@@ -750,8 +761,10 @@ return /******/ (function(modules) { // webpackBootstrap
 	   * @param  to     {string} the key for the terminating vertex
 	   * @param [value] {*}      the value to store in this edge
 	   */ // TODO: allow [from, to], value array to be given as argument in docss; or [[from, to], value] as single argument
+		}, {
+			key: 'setEdge',
 			value: function setEdge(from, to, value) {
-				var _Graph$_extractThreeArgs4 = Graph[_options$_vertices$_edges$_reverseEdges$_sources$_sinks$_edgeCount$_listeners$_extractTwoArgs$_extractThreeArgs$_trigger$_verticesFrom$_verticesTo$_edgesFrom$_edgesTo$_verticesWithPathTo$_verticesWithPathFrom$_paths$_expectVertices$_expectVerticesAbsent$_expectEdges$_expectEdgesAbsent$_expectNoConnectedEdges._extractThreeArgs](from, to, value);
+				var _Graph$_extractThreeArgs4 = Graph[_privateEs6Js._extractThreeArgs](from, to, value);
 	
 				var _Graph$_extractThreeArgs42 = _slicedToArray(_Graph$_extractThreeArgs4, 3);
 	
@@ -759,12 +772,10 @@ return /******/ (function(modules) { // webpackBootstrap
 				to = _Graph$_extractThreeArgs42[1];
 				value = _Graph$_extractThreeArgs42[2];
 	
-				this[_options$_vertices$_edges$_reverseEdges$_sources$_sinks$_edgeCount$_listeners$_extractTwoArgs$_extractThreeArgs$_trigger$_verticesFrom$_verticesTo$_edgesFrom$_edgesTo$_verticesWithPathTo$_verticesWithPathFrom$_paths$_expectVertices$_expectVerticesAbsent$_expectEdges$_expectEdgesAbsent$_expectNoConnectedEdges._expectEdges]([from, to]);
-				this[_options$_vertices$_edges$_reverseEdges$_sources$_sinks$_edgeCount$_listeners$_extractTwoArgs$_extractThreeArgs$_trigger$_verticesFrom$_verticesTo$_edgesFrom$_edgesTo$_verticesWithPathTo$_verticesWithPathFrom$_paths$_expectVertices$_expectVerticesAbsent$_expectEdges$_expectEdgesAbsent$_expectNoConnectedEdges._edges].get(from).set(to, value);
-				this[_options$_vertices$_edges$_reverseEdges$_sources$_sinks$_edgeCount$_listeners$_extractTwoArgs$_extractThreeArgs$_trigger$_verticesFrom$_verticesTo$_edgesFrom$_edgesTo$_verticesWithPathTo$_verticesWithPathFrom$_paths$_expectVertices$_expectVerticesAbsent$_expectEdges$_expectEdgesAbsent$_expectNoConnectedEdges._trigger]('edge-modified', this.edge(from, to));
+				this[_privateEs6Js._expectEdges]([from, to]);
+				this[_privateEs6Js._edges].get(from).set(to, value);
+				this[_privateEs6Js._trigger]('edge-modified', this.edge(from, to));
 			}
-		}, {
-			key: 'spanEdge',
 	
 			/**
 	   * Make sure an edge between the `from` and `to` vertices in this graph.
@@ -775,8 +786,10 @@ return /******/ (function(modules) { // webpackBootstrap
 	   * @param  to     {string} the key for the terminating vertex
 	   * @param [value] {*}      the value to store if a new edge is added
 	   */ // TODO: allow [from, to], value array to be given as argument in docss; or [[from, to], value] as single argument
+		}, {
+			key: 'spanEdge',
 			value: function spanEdge(from, to, value) {
-				var _Graph$_extractThreeArgs5 = Graph[_options$_vertices$_edges$_reverseEdges$_sources$_sinks$_edgeCount$_listeners$_extractTwoArgs$_extractThreeArgs$_trigger$_verticesFrom$_verticesTo$_edgesFrom$_edgesTo$_verticesWithPathTo$_verticesWithPathFrom$_paths$_expectVertices$_expectVerticesAbsent$_expectEdges$_expectEdgesAbsent$_expectNoConnectedEdges._extractThreeArgs](from, to, value);
+				var _Graph$_extractThreeArgs5 = Graph[_privateEs6Js._extractThreeArgs](from, to, value);
 	
 				var _Graph$_extractThreeArgs52 = _slicedToArray(_Graph$_extractThreeArgs5, 3);
 	
@@ -784,13 +797,11 @@ return /******/ (function(modules) { // webpackBootstrap
 				to = _Graph$_extractThreeArgs52[1];
 				value = _Graph$_extractThreeArgs52[2];
 	
-				this[_options$_vertices$_edges$_reverseEdges$_sources$_sinks$_edgeCount$_listeners$_extractTwoArgs$_extractThreeArgs$_trigger$_verticesFrom$_verticesTo$_edgesFrom$_edgesTo$_verticesWithPathTo$_verticesWithPathFrom$_paths$_expectVertices$_expectVerticesAbsent$_expectEdges$_expectEdgesAbsent$_expectNoConnectedEdges._expectVertices](from, to);
+				this[_privateEs6Js._expectVertices](from, to);
 				if (!this.hasEdge(from, to)) {
 					this.addNewEdge(from, to, value);
 				}
 			}
-		}, {
-			key: 'addEdge',
 	
 			/**
 	   * Add a new edge to this graph. If an edge between `from` and `to` already exists,
@@ -800,8 +811,10 @@ return /******/ (function(modules) { // webpackBootstrap
 	   * @param  to     {string} the key for the terminating vertex
 	   * @param [value] {*}      the value to store in this new edge
 	   */ // TODO: allow [from, to], value array to be given as argument in docss; or [[from, to], value] as single argument
+		}, {
+			key: 'addEdge',
 			value: function addEdge(from, to, value) {
-				var _Graph$_extractThreeArgs6 = Graph[_options$_vertices$_edges$_reverseEdges$_sources$_sinks$_edgeCount$_listeners$_extractTwoArgs$_extractThreeArgs$_trigger$_verticesFrom$_verticesTo$_edgesFrom$_edgesTo$_verticesWithPathTo$_verticesWithPathFrom$_paths$_expectVertices$_expectVerticesAbsent$_expectEdges$_expectEdgesAbsent$_expectNoConnectedEdges._extractThreeArgs](from, to, value);
+				var _Graph$_extractThreeArgs6 = Graph[_privateEs6Js._extractThreeArgs](from, to, value);
 	
 				var _Graph$_extractThreeArgs62 = _slicedToArray(_Graph$_extractThreeArgs6, 3);
 	
@@ -815,8 +828,6 @@ return /******/ (function(modules) { // webpackBootstrap
 					this.addNewEdge(from, to, value);
 				}
 			}
-		}, {
-			key: 'ensureEdge',
 	
 			/**
 	   * Make sure an edge between the `from` and `to` vertices exists in this graph.
@@ -828,8 +839,10 @@ return /******/ (function(modules) { // webpackBootstrap
 	   * @param  to     {string} the key for the terminating vertex
 	   * @param [value] {*}      the value to store if a new edge is added
 	   */ // TODO: allow [from, to], value array to be given as argument in docss; or [[from, to], value] as single argument
+		}, {
+			key: 'ensureEdge',
 			value: function ensureEdge(from, to, value) {
-				var _Graph$_extractThreeArgs7 = Graph[_options$_vertices$_edges$_reverseEdges$_sources$_sinks$_edgeCount$_listeners$_extractTwoArgs$_extractThreeArgs$_trigger$_verticesFrom$_verticesTo$_edgesFrom$_edgesTo$_verticesWithPathTo$_verticesWithPathFrom$_paths$_expectVertices$_expectVerticesAbsent$_expectEdges$_expectEdgesAbsent$_expectNoConnectedEdges._extractThreeArgs](from, to, value);
+				var _Graph$_extractThreeArgs7 = Graph[_privateEs6Js._extractThreeArgs](from, to, value);
 	
 				var _Graph$_extractThreeArgs72 = _slicedToArray(_Graph$_extractThreeArgs7, 3);
 	
@@ -841,8 +854,6 @@ return /******/ (function(modules) { // webpackBootstrap
 					this.createNewEdge(from, to, value);
 				}
 			}
-		}, {
-			key: 'createEdge',
 	
 			/**
 	   * Add a new edge to this graph. If an edge between the `from` and `to`
@@ -853,8 +864,10 @@ return /******/ (function(modules) { // webpackBootstrap
 	   * @param  to     {string} the key for the terminating vertex
 	   * @param [value] {*}      the value to store if a new edge is added
 	   */ // TODO: allow [from, to], value array to be given as argument in docss; or [[from, to], value] as single argument
+		}, {
+			key: 'createEdge',
 			value: function createEdge(from, to, value) {
-				var _Graph$_extractThreeArgs8 = Graph[_options$_vertices$_edges$_reverseEdges$_sources$_sinks$_edgeCount$_listeners$_extractTwoArgs$_extractThreeArgs$_trigger$_verticesFrom$_verticesTo$_edgesFrom$_edgesTo$_verticesWithPathTo$_verticesWithPathFrom$_paths$_expectVertices$_expectVerticesAbsent$_expectEdges$_expectEdgesAbsent$_expectNoConnectedEdges._extractThreeArgs](from, to, value);
+				var _Graph$_extractThreeArgs8 = Graph[_privateEs6Js._extractThreeArgs](from, to, value);
 	
 				var _Graph$_extractThreeArgs82 = _slicedToArray(_Graph$_extractThreeArgs8, 3);
 	
@@ -868,8 +881,6 @@ return /******/ (function(modules) { // webpackBootstrap
 					this.createNewEdge(from, to, value);
 				}
 			}
-		}, {
-			key: 'removeExistingEdge',
 	
 			////////// removing them //////////
 	
@@ -879,28 +890,28 @@ return /******/ (function(modules) { // webpackBootstrap
 	   * @param from {string} the key for the originating vertex
 	   * @param to   {string} the key for the terminating vertex
 	   */ // TODO: allow [from, to] array to be given as argument in docs
+		}, {
+			key: 'removeExistingEdge',
 			value: function removeExistingEdge(from, to) {
-				var _Graph$_extractTwoArgs6 = Graph[_options$_vertices$_edges$_reverseEdges$_sources$_sinks$_edgeCount$_listeners$_extractTwoArgs$_extractThreeArgs$_trigger$_verticesFrom$_verticesTo$_edgesFrom$_edgesTo$_verticesWithPathTo$_verticesWithPathFrom$_paths$_expectVertices$_expectVerticesAbsent$_expectEdges$_expectEdgesAbsent$_expectNoConnectedEdges._extractTwoArgs](from, to);
+				var _Graph$_extractTwoArgs6 = Graph[_privateEs6Js._extractTwoArgs](from, to);
 	
 				var _Graph$_extractTwoArgs62 = _slicedToArray(_Graph$_extractTwoArgs6, 2);
 	
 				from = _Graph$_extractTwoArgs62[0];
 				to = _Graph$_extractTwoArgs62[1];
 	
-				this[_options$_vertices$_edges$_reverseEdges$_sources$_sinks$_edgeCount$_listeners$_extractTwoArgs$_extractThreeArgs$_trigger$_verticesFrom$_verticesTo$_edgesFrom$_edgesTo$_verticesWithPathTo$_verticesWithPathFrom$_paths$_expectVertices$_expectVerticesAbsent$_expectEdges$_expectEdgesAbsent$_expectNoConnectedEdges._expectEdges]([from, to]);
-				this[_options$_vertices$_edges$_reverseEdges$_sources$_sinks$_edgeCount$_listeners$_extractTwoArgs$_extractThreeArgs$_trigger$_verticesFrom$_verticesTo$_edgesFrom$_edgesTo$_verticesWithPathTo$_verticesWithPathFrom$_paths$_expectVertices$_expectVerticesAbsent$_expectEdges$_expectEdgesAbsent$_expectNoConnectedEdges._edges].get(from)['delete'](to);
-				this[_options$_vertices$_edges$_reverseEdges$_sources$_sinks$_edgeCount$_listeners$_extractTwoArgs$_extractThreeArgs$_trigger$_verticesFrom$_verticesTo$_edgesFrom$_edgesTo$_verticesWithPathTo$_verticesWithPathFrom$_paths$_expectVertices$_expectVerticesAbsent$_expectEdges$_expectEdgesAbsent$_expectNoConnectedEdges._reverseEdges].get(to)['delete'](from);
-				this[_options$_vertices$_edges$_reverseEdges$_sources$_sinks$_edgeCount$_listeners$_extractTwoArgs$_extractThreeArgs$_trigger$_verticesFrom$_verticesTo$_edgesFrom$_edgesTo$_verticesWithPathTo$_verticesWithPathFrom$_paths$_expectVertices$_expectVerticesAbsent$_expectEdges$_expectEdgesAbsent$_expectNoConnectedEdges._edgeCount] -= 1;
+				this[_privateEs6Js._expectEdges]([from, to]);
+				this[_privateEs6Js._edges].get(from)['delete'](to);
+				this[_privateEs6Js._reverseEdges].get(to)['delete'](from);
+				this[_privateEs6Js._edgeCount] -= 1;
 				if (this.inDegree(to) === 0) {
-					this[_options$_vertices$_edges$_reverseEdges$_sources$_sinks$_edgeCount$_listeners$_extractTwoArgs$_extractThreeArgs$_trigger$_verticesFrom$_verticesTo$_edgesFrom$_edgesTo$_verticesWithPathTo$_verticesWithPathFrom$_paths$_expectVertices$_expectVerticesAbsent$_expectEdges$_expectEdgesAbsent$_expectNoConnectedEdges._sources].add(to);
+					this[_privateEs6Js._sources].add(to);
 				}
 				if (this.outDegree(from) === 0) {
-					this[_options$_vertices$_edges$_reverseEdges$_sources$_sinks$_edgeCount$_listeners$_extractTwoArgs$_extractThreeArgs$_trigger$_verticesFrom$_verticesTo$_edgesFrom$_edgesTo$_verticesWithPathTo$_verticesWithPathFrom$_paths$_expectVertices$_expectVerticesAbsent$_expectEdges$_expectEdgesAbsent$_expectNoConnectedEdges._sinks].add(from);
+					this[_privateEs6Js._sinks].add(from);
 				}
-				this[_options$_vertices$_edges$_reverseEdges$_sources$_sinks$_edgeCount$_listeners$_extractTwoArgs$_extractThreeArgs$_trigger$_verticesFrom$_verticesTo$_edgesFrom$_edgesTo$_verticesWithPathTo$_verticesWithPathFrom$_paths$_expectVertices$_expectVerticesAbsent$_expectEdges$_expectEdgesAbsent$_expectNoConnectedEdges._trigger]('edge-removed', [from, to]);
+				this[_privateEs6Js._trigger]('edge-removed', [from, to]);
 			}
-		}, {
-			key: 'removeEdge',
 	
 			/**
 	   * Remove an edge from this graph.
@@ -908,8 +919,10 @@ return /******/ (function(modules) { // webpackBootstrap
 	   * @param from {string} the key for the originating vertex
 	   * @param to   {string} the key for the terminating vertex
 	   */ // TODO: allow [from, to] array to be given as argument in docs
+		}, {
+			key: 'removeEdge',
 			value: function removeEdge(from, to) {
-				var _Graph$_extractTwoArgs7 = Graph[_options$_vertices$_edges$_reverseEdges$_sources$_sinks$_edgeCount$_listeners$_extractTwoArgs$_extractThreeArgs$_trigger$_verticesFrom$_verticesTo$_edgesFrom$_edgesTo$_verticesWithPathTo$_verticesWithPathFrom$_paths$_expectVertices$_expectVerticesAbsent$_expectEdges$_expectEdgesAbsent$_expectNoConnectedEdges._extractTwoArgs](from, to);
+				var _Graph$_extractTwoArgs7 = Graph[_privateEs6Js._extractTwoArgs](from, to);
 	
 				var _Graph$_extractTwoArgs72 = _slicedToArray(_Graph$_extractTwoArgs7, 2);
 	
@@ -920,19 +933,17 @@ return /******/ (function(modules) { // webpackBootstrap
 					this.removeExistingEdge(from, to);
 				}
 			}
-		}, {
-			key: 'edgeCount',
 	
 			////////// querying them //////////
 	
 			/**
 	   * @returns {number} the number of edges in the whole graph
 	   */
-			value: function edgeCount() {
-				return this[_options$_vertices$_edges$_reverseEdges$_sources$_sinks$_edgeCount$_listeners$_extractTwoArgs$_extractThreeArgs$_trigger$_verticesFrom$_verticesTo$_edgesFrom$_edgesTo$_verticesWithPathTo$_verticesWithPathFrom$_paths$_expectVertices$_expectVerticesAbsent$_expectEdges$_expectEdgesAbsent$_expectNoConnectedEdges._edgeCount];
-			}
 		}, {
-			key: 'hasEdge',
+			key: 'edgeCount',
+			value: function edgeCount() {
+				return this[_privateEs6Js._edgeCount];
+			}
 	
 			/**
 	   * Ask whether an edge between given `from` and `to` vertices exist.
@@ -940,18 +951,18 @@ return /******/ (function(modules) { // webpackBootstrap
 	   * @param to   {string} the key for the terminating vertex
 	   * @returns {boolean} whether there is an edge between the given `from` and `to` vertices
 	   */ // TODO: allow [from, to] array to be given as argument in docs
+		}, {
+			key: 'hasEdge',
 			value: function hasEdge(from, to) {
-				var _Graph$_extractTwoArgs8 = Graph[_options$_vertices$_edges$_reverseEdges$_sources$_sinks$_edgeCount$_listeners$_extractTwoArgs$_extractThreeArgs$_trigger$_verticesFrom$_verticesTo$_edgesFrom$_edgesTo$_verticesWithPathTo$_verticesWithPathFrom$_paths$_expectVertices$_expectVerticesAbsent$_expectEdges$_expectEdgesAbsent$_expectNoConnectedEdges._extractTwoArgs](from, to);
+				var _Graph$_extractTwoArgs8 = Graph[_privateEs6Js._extractTwoArgs](from, to);
 	
 				var _Graph$_extractTwoArgs82 = _slicedToArray(_Graph$_extractTwoArgs8, 2);
 	
 				from = _Graph$_extractTwoArgs82[0];
 				to = _Graph$_extractTwoArgs82[1];
 	
-				return this.hasVertex(from) && this.hasVertex(to) && this[_options$_vertices$_edges$_reverseEdges$_sources$_sinks$_edgeCount$_listeners$_extractTwoArgs$_extractThreeArgs$_trigger$_verticesFrom$_verticesTo$_edgesFrom$_edgesTo$_verticesWithPathTo$_verticesWithPathFrom$_paths$_expectVertices$_expectVerticesAbsent$_expectEdges$_expectEdgesAbsent$_expectNoConnectedEdges._edges].has(from) && this[_options$_vertices$_edges$_reverseEdges$_sources$_sinks$_edgeCount$_listeners$_extractTwoArgs$_extractThreeArgs$_trigger$_verticesFrom$_verticesTo$_edgesFrom$_edgesTo$_verticesWithPathTo$_verticesWithPathFrom$_paths$_expectVertices$_expectVerticesAbsent$_expectEdges$_expectEdgesAbsent$_expectNoConnectedEdges._edges].get(from).has(to);
+				return this.hasVertex(from) && this.hasVertex(to) && this[_privateEs6Js._edges].has(from) && this[_privateEs6Js._edges].get(from).has(to);
 			}
-		}, {
-			key: 'edge',
 	
 			/**
 	   * Get the key/value pair representing the edge between the given `from` and `to`.
@@ -959,19 +970,19 @@ return /******/ (function(modules) { // webpackBootstrap
 	   * @param to   {string} the key for the terminating vertex
 	   * @returns {Array} a `[[from, to], value]` shaped array representing the edge
 	   */ // TODO: allow [from, to] array to be given as argument in docs
+		}, {
+			key: 'edge',
 			value: function edge(from, to) {
-				var _Graph$_extractTwoArgs9 = Graph[_options$_vertices$_edges$_reverseEdges$_sources$_sinks$_edgeCount$_listeners$_extractTwoArgs$_extractThreeArgs$_trigger$_verticesFrom$_verticesTo$_edgesFrom$_edgesTo$_verticesWithPathTo$_verticesWithPathFrom$_paths$_expectVertices$_expectVerticesAbsent$_expectEdges$_expectEdgesAbsent$_expectNoConnectedEdges._extractTwoArgs](from, to);
+				var _Graph$_extractTwoArgs9 = Graph[_privateEs6Js._extractTwoArgs](from, to);
 	
 				var _Graph$_extractTwoArgs92 = _slicedToArray(_Graph$_extractTwoArgs9, 2);
 	
 				from = _Graph$_extractTwoArgs92[0];
 				to = _Graph$_extractTwoArgs92[1];
 	
-				this[_options$_vertices$_edges$_reverseEdges$_sources$_sinks$_edgeCount$_listeners$_extractTwoArgs$_extractThreeArgs$_trigger$_verticesFrom$_verticesTo$_edgesFrom$_edgesTo$_verticesWithPathTo$_verticesWithPathFrom$_paths$_expectVertices$_expectVerticesAbsent$_expectEdges$_expectEdgesAbsent$_expectNoConnectedEdges._expectEdges]([from, to]);
+				this[_privateEs6Js._expectEdges]([from, to]);
 				return [[from, to], this.edgeValue(from, to)];
 			}
-		}, {
-			key: 'edgeValue',
 	
 			/**
 	   * Get the value associated with the edge between given `from` and `to` vertices.
@@ -985,18 +996,18 @@ return /******/ (function(modules) { // webpackBootstrap
 	   *
 	   * Use {@link Graph#hasEdge} to distinguish these cases.
 	   */ // TODO: allow [from, to] array to be given as argument in docs
+		}, {
+			key: 'edgeValue',
 			value: function edgeValue(from, to) {
-				var _Graph$_extractTwoArgs10 = Graph[_options$_vertices$_edges$_reverseEdges$_sources$_sinks$_edgeCount$_listeners$_extractTwoArgs$_extractThreeArgs$_trigger$_verticesFrom$_verticesTo$_edgesFrom$_edgesTo$_verticesWithPathTo$_verticesWithPathFrom$_paths$_expectVertices$_expectVerticesAbsent$_expectEdges$_expectEdgesAbsent$_expectNoConnectedEdges._extractTwoArgs](from, to);
+				var _Graph$_extractTwoArgs10 = Graph[_privateEs6Js._extractTwoArgs](from, to);
 	
 				var _Graph$_extractTwoArgs102 = _slicedToArray(_Graph$_extractTwoArgs10, 2);
 	
 				from = _Graph$_extractTwoArgs102[0];
 				to = _Graph$_extractTwoArgs102[1];
 	
-				return this.hasEdge(from, to) ? this[_options$_vertices$_edges$_reverseEdges$_sources$_sinks$_edgeCount$_listeners$_extractTwoArgs$_extractThreeArgs$_trigger$_verticesFrom$_verticesTo$_edgesFrom$_edgesTo$_verticesWithPathTo$_verticesWithPathFrom$_paths$_expectVertices$_expectVerticesAbsent$_expectEdges$_expectEdgesAbsent$_expectNoConnectedEdges._edges].get(from).get(to) : undefined;
+				return this.hasEdge(from, to) ? this[_privateEs6Js._edges].get(from).get(to) : undefined;
 			}
-		}, {
-			key: 'vertices',
 	
 			///////////////////////////////////////////////
 			//////////// ES6 Iterable interfaces //////////
@@ -1018,6 +1029,8 @@ return /******/ (function(modules) { // webpackBootstrap
 	   * }
 	   * @see {@link Graph#@@iterator}
 	   */
+		}, {
+			key: 'vertices',
 			value: regeneratorRuntime.mark(function vertices() {
 				var done, _iteratorNormalCompletion6, _didIteratorError6, _iteratorError6, _iterator6, _step6, _step6$value, key;
 	
@@ -1029,7 +1042,7 @@ return /******/ (function(modules) { // webpackBootstrap
 							_didIteratorError6 = false;
 							_iteratorError6 = undefined;
 							context$2$0.prev = 4;
-							_iterator6 = this[_options$_vertices$_edges$_reverseEdges$_sources$_sinks$_edgeCount$_listeners$_extractTwoArgs$_extractThreeArgs$_trigger$_verticesFrom$_verticesTo$_edgesFrom$_edgesTo$_verticesWithPathTo$_verticesWithPathFrom$_paths$_expectVertices$_expectVerticesAbsent$_expectEdges$_expectEdgesAbsent$_expectNoConnectedEdges._vertices][Symbol.iterator]();
+							_iterator6 = this[_privateEs6Js._vertices][Symbol.iterator]();
 	
 						case 6:
 							if (_iteratorNormalCompletion6 = (_step6 = _iterator6.next()).done) {
@@ -1094,8 +1107,6 @@ return /******/ (function(modules) { // webpackBootstrap
 					}
 				}, vertices, this, [[4, 18, 22, 30], [23,, 25, 29]]);
 			})
-		}, {
-			key: Symbol.iterator,
 	
 			/**
 	   * A {@link Graph} object is itself {@link https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Iteration_protocols#The_iterable_protocol|iterable},
@@ -1108,11 +1119,11 @@ return /******/ (function(modules) { // webpackBootstrap
 	   * }
 	   * @see {@link Graph#vertices}
 	   */
-			value: function () {
+		}, {
+			key: Symbol.iterator,
+			value: function value() {
 				return this.vertices();
 			}
-		}, {
-			key: 'edges',
 	
 			/**
 	   * Iterate over all edges of the graph, in no particular order.
@@ -1130,6 +1141,8 @@ return /******/ (function(modules) { // webpackBootstrap
 	   *     // iterates over all vertices of the graph
 	   * }
 	   */
+		}, {
+			key: 'edges',
 			value: regeneratorRuntime.mark(function edges() {
 				var done, _iteratorNormalCompletion7, _didIteratorError7, _iteratorError7, _iterator7, _step7, from, _iteratorNormalCompletion8, _didIteratorError8, _iteratorError8, _iterator8, _step8, to;
 	
@@ -1141,7 +1154,7 @@ return /******/ (function(modules) { // webpackBootstrap
 							_didIteratorError7 = false;
 							_iteratorError7 = undefined;
 							context$2$0.prev = 4;
-							_iterator7 = this[_options$_vertices$_edges$_reverseEdges$_sources$_sinks$_edgeCount$_listeners$_extractTwoArgs$_extractThreeArgs$_trigger$_verticesFrom$_verticesTo$_edgesFrom$_edgesTo$_verticesWithPathTo$_verticesWithPathFrom$_paths$_expectVertices$_expectVerticesAbsent$_expectEdges$_expectEdgesAbsent$_expectNoConnectedEdges._edges].keys()[Symbol.iterator]();
+							_iterator7 = this[_privateEs6Js._edges].keys()[Symbol.iterator]();
 	
 						case 6:
 							if (_iteratorNormalCompletion7 = (_step7 = _iterator7.next()).done) {
@@ -1156,7 +1169,7 @@ return /******/ (function(modules) { // webpackBootstrap
 							_didIteratorError8 = false;
 							_iteratorError8 = undefined;
 							context$2$0.prev = 12;
-							_iterator8 = this[_options$_vertices$_edges$_reverseEdges$_sources$_sinks$_edgeCount$_listeners$_extractTwoArgs$_extractThreeArgs$_trigger$_verticesFrom$_verticesTo$_edgesFrom$_edgesTo$_verticesWithPathTo$_verticesWithPathFrom$_paths$_expectVertices$_expectVerticesAbsent$_expectEdges$_expectEdgesAbsent$_expectNoConnectedEdges._edges].get(from).keys()[Symbol.iterator]();
+							_iterator8 = this[_privateEs6Js._edges].get(from).keys()[Symbol.iterator]();
 	
 						case 14:
 							if (_iteratorNormalCompletion8 = (_step8 = _iterator8.next()).done) {
@@ -1186,9 +1199,9 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 						case 25:
 							context$2$0.prev = 25;
-							context$2$0.t1 = context$2$0['catch'](12);
+							context$2$0.t0 = context$2$0['catch'](12);
 							_didIteratorError8 = true;
-							_iteratorError8 = context$2$0.t1;
+							_iteratorError8 = context$2$0.t0;
 	
 						case 29:
 							context$2$0.prev = 29;
@@ -1225,9 +1238,9 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 						case 42:
 							context$2$0.prev = 42;
-							context$2$0.t2 = context$2$0['catch'](4);
+							context$2$0.t1 = context$2$0['catch'](4);
 							_didIteratorError7 = true;
-							_iteratorError7 = context$2$0.t2;
+							_iteratorError7 = context$2$0.t1;
 	
 						case 46:
 							context$2$0.prev = 46;
@@ -1259,8 +1272,6 @@ return /******/ (function(modules) { // webpackBootstrap
 					}
 				}, edges, this, [[4, 42, 46, 54], [12, 25, 29, 37], [30,, 32, 36], [47,, 49, 53]]);
 			})
-		}, {
-			key: 'verticesFrom',
 	
 			/**
 	   * Iterate over the vertices directly reachable from a given vertex in the graph, in no particular order.
@@ -1279,16 +1290,18 @@ return /******/ (function(modules) { // webpackBootstrap
 	   *     // iterates over all outgoing vertices of the `from` vertex
 	   * }
 	   */
+		}, {
+			key: 'verticesFrom',
 			value: function verticesFrom(key) {
-				this[_options$_vertices$_edges$_reverseEdges$_sources$_sinks$_edgeCount$_listeners$_extractTwoArgs$_extractThreeArgs$_trigger$_verticesFrom$_verticesTo$_edgesFrom$_edgesTo$_verticesWithPathTo$_verticesWithPathFrom$_paths$_expectVertices$_expectVerticesAbsent$_expectEdges$_expectEdgesAbsent$_expectNoConnectedEdges._expectVertices](key);
-				return this[_options$_vertices$_edges$_reverseEdges$_sources$_sinks$_edgeCount$_listeners$_extractTwoArgs$_extractThreeArgs$_trigger$_verticesFrom$_verticesTo$_edgesFrom$_edgesTo$_verticesWithPathTo$_verticesWithPathFrom$_paths$_expectVertices$_expectVerticesAbsent$_expectEdges$_expectEdgesAbsent$_expectNoConnectedEdges._verticesFrom](key);
+				this[_privateEs6Js._expectVertices](key);
+				return this[_privateEs6Js._verticesFrom](key);
 			}
 		}, {
-			key: _options$_vertices$_edges$_reverseEdges$_sources$_sinks$_edgeCount$_listeners$_extractTwoArgs$_extractThreeArgs$_trigger$_verticesFrom$_verticesTo$_edgesFrom$_edgesTo$_verticesWithPathTo$_verticesWithPathFrom$_paths$_expectVertices$_expectVerticesAbsent$_expectEdges$_expectEdgesAbsent$_expectNoConnectedEdges._verticesFrom,
-			value: regeneratorRuntime.mark(function callee$1$0(from) {
+			key: _privateEs6Js._verticesFrom,
+			value: regeneratorRuntime.mark(function value(from) {
 				var done, _iteratorNormalCompletion9, _didIteratorError9, _iteratorError9, _iterator9, _step9, to;
 	
-				return regeneratorRuntime.wrap(function callee$1$0$(context$2$0) {
+				return regeneratorRuntime.wrap(function value$(context$2$0) {
 					while (1) switch (context$2$0.prev = context$2$0.next) {
 						case 0:
 							done = new Set();
@@ -1296,7 +1309,7 @@ return /******/ (function(modules) { // webpackBootstrap
 							_didIteratorError9 = false;
 							_iteratorError9 = undefined;
 							context$2$0.prev = 4;
-							_iterator9 = this[_options$_vertices$_edges$_reverseEdges$_sources$_sinks$_edgeCount$_listeners$_extractTwoArgs$_extractThreeArgs$_trigger$_verticesFrom$_verticesTo$_edgesFrom$_edgesTo$_verticesWithPathTo$_verticesWithPathFrom$_paths$_expectVertices$_expectVerticesAbsent$_expectEdges$_expectEdgesAbsent$_expectNoConnectedEdges._edges].get(from).keys()[Symbol.iterator]();
+							_iterator9 = this[_privateEs6Js._edges].get(from).keys()[Symbol.iterator]();
 	
 						case 6:
 							if (_iteratorNormalCompletion9 = (_step9 = _iterator9.next()).done) {
@@ -1326,9 +1339,9 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 						case 17:
 							context$2$0.prev = 17;
-							context$2$0.t3 = context$2$0['catch'](4);
+							context$2$0.t0 = context$2$0['catch'](4);
 							_didIteratorError9 = true;
-							_iteratorError9 = context$2$0.t3;
+							_iteratorError9 = context$2$0.t0;
 	
 						case 21:
 							context$2$0.prev = 21;
@@ -1358,10 +1371,8 @@ return /******/ (function(modules) { // webpackBootstrap
 						case 'end':
 							return context$2$0.stop();
 					}
-				}, callee$1$0, this, [[4, 17, 21, 29], [22,, 24, 28]]);
+				}, value, this, [[4, 17, 21, 29], [22,, 24, 28]]);
 			})
-		}, {
-			key: 'verticesTo',
 	
 			/**
 	   * Iterate over the vertices from which a given vertex in the graph is directly reachable, in no particular order.
@@ -1380,16 +1391,18 @@ return /******/ (function(modules) { // webpackBootstrap
 	   *     // iterates over all incoming vertices of the `to` vertex
 	   * }
 	   */
+		}, {
+			key: 'verticesTo',
 			value: function verticesTo(key) {
-				this[_options$_vertices$_edges$_reverseEdges$_sources$_sinks$_edgeCount$_listeners$_extractTwoArgs$_extractThreeArgs$_trigger$_verticesFrom$_verticesTo$_edgesFrom$_edgesTo$_verticesWithPathTo$_verticesWithPathFrom$_paths$_expectVertices$_expectVerticesAbsent$_expectEdges$_expectEdgesAbsent$_expectNoConnectedEdges._expectVertices](key);
-				return this[_options$_vertices$_edges$_reverseEdges$_sources$_sinks$_edgeCount$_listeners$_extractTwoArgs$_extractThreeArgs$_trigger$_verticesFrom$_verticesTo$_edgesFrom$_edgesTo$_verticesWithPathTo$_verticesWithPathFrom$_paths$_expectVertices$_expectVerticesAbsent$_expectEdges$_expectEdgesAbsent$_expectNoConnectedEdges._verticesTo](key);
+				this[_privateEs6Js._expectVertices](key);
+				return this[_privateEs6Js._verticesTo](key);
 			}
 		}, {
-			key: _options$_vertices$_edges$_reverseEdges$_sources$_sinks$_edgeCount$_listeners$_extractTwoArgs$_extractThreeArgs$_trigger$_verticesFrom$_verticesTo$_edgesFrom$_edgesTo$_verticesWithPathTo$_verticesWithPathFrom$_paths$_expectVertices$_expectVerticesAbsent$_expectEdges$_expectEdgesAbsent$_expectNoConnectedEdges._verticesTo,
-			value: regeneratorRuntime.mark(function callee$1$1(to) {
+			key: _privateEs6Js._verticesTo,
+			value: regeneratorRuntime.mark(function value(to) {
 				var done, _iteratorNormalCompletion10, _didIteratorError10, _iteratorError10, _iterator10, _step10, from;
 	
-				return regeneratorRuntime.wrap(function callee$1$1$(context$2$0) {
+				return regeneratorRuntime.wrap(function value$(context$2$0) {
 					while (1) switch (context$2$0.prev = context$2$0.next) {
 						case 0:
 							done = new Set();
@@ -1397,7 +1410,7 @@ return /******/ (function(modules) { // webpackBootstrap
 							_didIteratorError10 = false;
 							_iteratorError10 = undefined;
 							context$2$0.prev = 4;
-							_iterator10 = this[_options$_vertices$_edges$_reverseEdges$_sources$_sinks$_edgeCount$_listeners$_extractTwoArgs$_extractThreeArgs$_trigger$_verticesFrom$_verticesTo$_edgesFrom$_edgesTo$_verticesWithPathTo$_verticesWithPathFrom$_paths$_expectVertices$_expectVerticesAbsent$_expectEdges$_expectEdgesAbsent$_expectNoConnectedEdges._reverseEdges].get(to)[Symbol.iterator]();
+							_iterator10 = this[_privateEs6Js._reverseEdges].get(to)[Symbol.iterator]();
 	
 						case 6:
 							if (_iteratorNormalCompletion10 = (_step10 = _iterator10.next()).done) {
@@ -1427,9 +1440,9 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 						case 17:
 							context$2$0.prev = 17;
-							context$2$0.t4 = context$2$0['catch'](4);
+							context$2$0.t0 = context$2$0['catch'](4);
 							_didIteratorError10 = true;
-							_iteratorError10 = context$2$0.t4;
+							_iteratorError10 = context$2$0.t0;
 	
 						case 21:
 							context$2$0.prev = 21;
@@ -1459,10 +1472,8 @@ return /******/ (function(modules) { // webpackBootstrap
 						case 'end':
 							return context$2$0.stop();
 					}
-				}, callee$1$1, this, [[4, 17, 21, 29], [22,, 24, 28]]);
+				}, value, this, [[4, 17, 21, 29], [22,, 24, 28]]);
 			})
-		}, {
-			key: 'edgesFrom',
 	
 			/**
 	   * Iterate over the outgoing edges of a given vertex in the graph, in no particular order.
@@ -1482,16 +1493,18 @@ return /******/ (function(modules) { // webpackBootstrap
 	   *     // iterates over all outgoing edges of the `from` vertex
 	   * }
 	   */
+		}, {
+			key: 'edgesFrom',
 			value: function edgesFrom(key) {
-				this[_options$_vertices$_edges$_reverseEdges$_sources$_sinks$_edgeCount$_listeners$_extractTwoArgs$_extractThreeArgs$_trigger$_verticesFrom$_verticesTo$_edgesFrom$_edgesTo$_verticesWithPathTo$_verticesWithPathFrom$_paths$_expectVertices$_expectVerticesAbsent$_expectEdges$_expectEdgesAbsent$_expectNoConnectedEdges._expectVertices](key);
-				return this[_options$_vertices$_edges$_reverseEdges$_sources$_sinks$_edgeCount$_listeners$_extractTwoArgs$_extractThreeArgs$_trigger$_verticesFrom$_verticesTo$_edgesFrom$_edgesTo$_verticesWithPathTo$_verticesWithPathFrom$_paths$_expectVertices$_expectVerticesAbsent$_expectEdges$_expectEdgesAbsent$_expectNoConnectedEdges._edgesFrom](key);
+				this[_privateEs6Js._expectVertices](key);
+				return this[_privateEs6Js._edgesFrom](key);
 			}
 		}, {
-			key: _options$_vertices$_edges$_reverseEdges$_sources$_sinks$_edgeCount$_listeners$_extractTwoArgs$_extractThreeArgs$_trigger$_verticesFrom$_verticesTo$_edgesFrom$_edgesTo$_verticesWithPathTo$_verticesWithPathFrom$_paths$_expectVertices$_expectVerticesAbsent$_expectEdges$_expectEdgesAbsent$_expectNoConnectedEdges._edgesFrom,
-			value: regeneratorRuntime.mark(function callee$1$2(from) {
+			key: _privateEs6Js._edgesFrom,
+			value: regeneratorRuntime.mark(function value(from) {
 				var done, _iteratorNormalCompletion11, _didIteratorError11, _iteratorError11, _iterator11, _step11, to;
 	
-				return regeneratorRuntime.wrap(function callee$1$2$(context$2$0) {
+				return regeneratorRuntime.wrap(function value$(context$2$0) {
 					while (1) switch (context$2$0.prev = context$2$0.next) {
 						case 0:
 							done = new Set();
@@ -1499,7 +1512,7 @@ return /******/ (function(modules) { // webpackBootstrap
 							_didIteratorError11 = false;
 							_iteratorError11 = undefined;
 							context$2$0.prev = 4;
-							_iterator11 = this[_options$_vertices$_edges$_reverseEdges$_sources$_sinks$_edgeCount$_listeners$_extractTwoArgs$_extractThreeArgs$_trigger$_verticesFrom$_verticesTo$_edgesFrom$_edgesTo$_verticesWithPathTo$_verticesWithPathFrom$_paths$_expectVertices$_expectVerticesAbsent$_expectEdges$_expectEdgesAbsent$_expectNoConnectedEdges._edges].get(from).keys()[Symbol.iterator]();
+							_iterator11 = this[_privateEs6Js._edges].get(from).keys()[Symbol.iterator]();
 	
 						case 6:
 							if (_iteratorNormalCompletion11 = (_step11 = _iterator11.next()).done) {
@@ -1529,9 +1542,9 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 						case 17:
 							context$2$0.prev = 17;
-							context$2$0.t5 = context$2$0['catch'](4);
+							context$2$0.t0 = context$2$0['catch'](4);
 							_didIteratorError11 = true;
-							_iteratorError11 = context$2$0.t5;
+							_iteratorError11 = context$2$0.t0;
 	
 						case 21:
 							context$2$0.prev = 21;
@@ -1561,10 +1574,8 @@ return /******/ (function(modules) { // webpackBootstrap
 						case 'end':
 							return context$2$0.stop();
 					}
-				}, callee$1$2, this, [[4, 17, 21, 29], [22,, 24, 28]]);
+				}, value, this, [[4, 17, 21, 29], [22,, 24, 28]]);
 			})
-		}, {
-			key: 'edgesTo',
 	
 			/**
 	   * Iterate over the incoming edges of a given vertex in the graph, in no particular order.
@@ -1584,16 +1595,18 @@ return /******/ (function(modules) { // webpackBootstrap
 	   *     // iterates over all incoming edges of the `to` vertex
 	   * }
 	   */
+		}, {
+			key: 'edgesTo',
 			value: function edgesTo(key) {
-				this[_options$_vertices$_edges$_reverseEdges$_sources$_sinks$_edgeCount$_listeners$_extractTwoArgs$_extractThreeArgs$_trigger$_verticesFrom$_verticesTo$_edgesFrom$_edgesTo$_verticesWithPathTo$_verticesWithPathFrom$_paths$_expectVertices$_expectVerticesAbsent$_expectEdges$_expectEdgesAbsent$_expectNoConnectedEdges._expectVertices](key);
-				return this[_options$_vertices$_edges$_reverseEdges$_sources$_sinks$_edgeCount$_listeners$_extractTwoArgs$_extractThreeArgs$_trigger$_verticesFrom$_verticesTo$_edgesFrom$_edgesTo$_verticesWithPathTo$_verticesWithPathFrom$_paths$_expectVertices$_expectVerticesAbsent$_expectEdges$_expectEdgesAbsent$_expectNoConnectedEdges._edgesTo](key);
+				this[_privateEs6Js._expectVertices](key);
+				return this[_privateEs6Js._edgesTo](key);
 			}
 		}, {
-			key: _options$_vertices$_edges$_reverseEdges$_sources$_sinks$_edgeCount$_listeners$_extractTwoArgs$_extractThreeArgs$_trigger$_verticesFrom$_verticesTo$_edgesFrom$_edgesTo$_verticesWithPathTo$_verticesWithPathFrom$_paths$_expectVertices$_expectVerticesAbsent$_expectEdges$_expectEdgesAbsent$_expectNoConnectedEdges._edgesTo,
-			value: regeneratorRuntime.mark(function callee$1$3(to) {
+			key: _privateEs6Js._edgesTo,
+			value: regeneratorRuntime.mark(function value(to) {
 				var done, _iteratorNormalCompletion12, _didIteratorError12, _iteratorError12, _iterator12, _step12, from;
 	
-				return regeneratorRuntime.wrap(function callee$1$3$(context$2$0) {
+				return regeneratorRuntime.wrap(function value$(context$2$0) {
 					while (1) switch (context$2$0.prev = context$2$0.next) {
 						case 0:
 							done = new Set();
@@ -1601,7 +1614,7 @@ return /******/ (function(modules) { // webpackBootstrap
 							_didIteratorError12 = false;
 							_iteratorError12 = undefined;
 							context$2$0.prev = 4;
-							_iterator12 = this[_options$_vertices$_edges$_reverseEdges$_sources$_sinks$_edgeCount$_listeners$_extractTwoArgs$_extractThreeArgs$_trigger$_verticesFrom$_verticesTo$_edgesFrom$_edgesTo$_verticesWithPathTo$_verticesWithPathFrom$_paths$_expectVertices$_expectVerticesAbsent$_expectEdges$_expectEdgesAbsent$_expectNoConnectedEdges._reverseEdges].get(to)[Symbol.iterator]();
+							_iterator12 = this[_privateEs6Js._reverseEdges].get(to)[Symbol.iterator]();
 	
 						case 6:
 							if (_iteratorNormalCompletion12 = (_step12 = _iterator12.next()).done) {
@@ -1631,9 +1644,9 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 						case 17:
 							context$2$0.prev = 17;
-							context$2$0.t6 = context$2$0['catch'](4);
+							context$2$0.t0 = context$2$0['catch'](4);
 							_didIteratorError12 = true;
-							_iteratorError12 = context$2$0.t6;
+							_iteratorError12 = context$2$0.t0;
 	
 						case 21:
 							context$2$0.prev = 21;
@@ -1663,10 +1676,8 @@ return /******/ (function(modules) { // webpackBootstrap
 						case 'end':
 							return context$2$0.stop();
 					}
-				}, callee$1$3, this, [[4, 17, 21, 29], [22,, 24, 28]]);
+				}, value, this, [[4, 17, 21, 29], [22,, 24, 28]]);
 			})
-		}, {
-			key: 'verticesWithPathFrom',
 	
 			/**
 	   * Iterate over all vertices reachable from a given vertex in the graph, in no particular order.
@@ -1685,16 +1696,18 @@ return /******/ (function(modules) { // webpackBootstrap
 	   *     // iterates over all vertices reachable from `from`
 	   * }
 	   */
+		}, {
+			key: 'verticesWithPathFrom',
 			value: function verticesWithPathFrom(from) {
-				this[_options$_vertices$_edges$_reverseEdges$_sources$_sinks$_edgeCount$_listeners$_extractTwoArgs$_extractThreeArgs$_trigger$_verticesFrom$_verticesTo$_edgesFrom$_edgesTo$_verticesWithPathTo$_verticesWithPathFrom$_paths$_expectVertices$_expectVerticesAbsent$_expectEdges$_expectEdgesAbsent$_expectNoConnectedEdges._expectVertices](from);
-				return this[_options$_vertices$_edges$_reverseEdges$_sources$_sinks$_edgeCount$_listeners$_extractTwoArgs$_extractThreeArgs$_trigger$_verticesFrom$_verticesTo$_edgesFrom$_edgesTo$_verticesWithPathTo$_verticesWithPathFrom$_paths$_expectVertices$_expectVerticesAbsent$_expectEdges$_expectEdgesAbsent$_expectNoConnectedEdges._verticesWithPathFrom](from, new Set());
+				this[_privateEs6Js._expectVertices](from);
+				return this[_privateEs6Js._verticesWithPathFrom](from, new Set());
 			}
 		}, {
-			key: _options$_vertices$_edges$_reverseEdges$_sources$_sinks$_edgeCount$_listeners$_extractTwoArgs$_extractThreeArgs$_trigger$_verticesFrom$_verticesTo$_edgesFrom$_edgesTo$_verticesWithPathTo$_verticesWithPathFrom$_paths$_expectVertices$_expectVerticesAbsent$_expectEdges$_expectEdgesAbsent$_expectNoConnectedEdges._verticesWithPathFrom,
-			value: regeneratorRuntime.mark(function callee$1$4(from, done) {
+			key: _privateEs6Js._verticesWithPathFrom,
+			value: regeneratorRuntime.mark(function value(from, done) {
 				var _iteratorNormalCompletion13, _didIteratorError13, _iteratorError13, _iterator13, _step13, _step13$value, to;
 	
-				return regeneratorRuntime.wrap(function callee$1$4$(context$2$0) {
+				return regeneratorRuntime.wrap(function value$(context$2$0) {
 					while (1) switch (context$2$0.prev = context$2$0.next) {
 						case 0:
 							_iteratorNormalCompletion13 = true;
@@ -1722,7 +1735,7 @@ return /******/ (function(modules) { // webpackBootstrap
 							return this.vertex(to);
 	
 						case 12:
-							return context$2$0.delegateYield(this[_options$_vertices$_edges$_reverseEdges$_sources$_sinks$_edgeCount$_listeners$_extractTwoArgs$_extractThreeArgs$_trigger$_verticesFrom$_verticesTo$_edgesFrom$_edgesTo$_verticesWithPathTo$_verticesWithPathFrom$_paths$_expectVertices$_expectVerticesAbsent$_expectEdges$_expectEdgesAbsent$_expectNoConnectedEdges._verticesWithPathFrom](to, done), 't7', 13);
+							return context$2$0.delegateYield(this[_privateEs6Js._verticesWithPathFrom](to, done), 't0', 13);
 	
 						case 13:
 							_iteratorNormalCompletion13 = true;
@@ -1735,9 +1748,9 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 						case 18:
 							context$2$0.prev = 18;
-							context$2$0.t8 = context$2$0['catch'](3);
+							context$2$0.t1 = context$2$0['catch'](3);
 							_didIteratorError13 = true;
-							_iteratorError13 = context$2$0.t8;
+							_iteratorError13 = context$2$0.t1;
 	
 						case 22:
 							context$2$0.prev = 22;
@@ -1767,10 +1780,8 @@ return /******/ (function(modules) { // webpackBootstrap
 						case 'end':
 							return context$2$0.stop();
 					}
-				}, callee$1$4, this, [[3, 18, 22, 30], [23,, 25, 29]]);
+				}, value, this, [[3, 18, 22, 30], [23,, 25, 29]]);
 			})
-		}, {
-			key: 'verticesWithPathTo',
 	
 			/**
 	   * Iterate over all vertices from which a given vertex in the graph can be reached, in no particular order.
@@ -1789,16 +1800,18 @@ return /******/ (function(modules) { // webpackBootstrap
 	   *     // iterates over all vertices from which `to` can be reached
 	   * }
 	   */
+		}, {
+			key: 'verticesWithPathTo',
 			value: function verticesWithPathTo(to) {
-				this[_options$_vertices$_edges$_reverseEdges$_sources$_sinks$_edgeCount$_listeners$_extractTwoArgs$_extractThreeArgs$_trigger$_verticesFrom$_verticesTo$_edgesFrom$_edgesTo$_verticesWithPathTo$_verticesWithPathFrom$_paths$_expectVertices$_expectVerticesAbsent$_expectEdges$_expectEdgesAbsent$_expectNoConnectedEdges._expectVertices](to);
-				return this[_options$_vertices$_edges$_reverseEdges$_sources$_sinks$_edgeCount$_listeners$_extractTwoArgs$_extractThreeArgs$_trigger$_verticesFrom$_verticesTo$_edgesFrom$_edgesTo$_verticesWithPathTo$_verticesWithPathFrom$_paths$_expectVertices$_expectVerticesAbsent$_expectEdges$_expectEdgesAbsent$_expectNoConnectedEdges._verticesWithPathTo](to, new Set());
+				this[_privateEs6Js._expectVertices](to);
+				return this[_privateEs6Js._verticesWithPathTo](to, new Set());
 			}
 		}, {
-			key: _options$_vertices$_edges$_reverseEdges$_sources$_sinks$_edgeCount$_listeners$_extractTwoArgs$_extractThreeArgs$_trigger$_verticesFrom$_verticesTo$_edgesFrom$_edgesTo$_verticesWithPathTo$_verticesWithPathFrom$_paths$_expectVertices$_expectVerticesAbsent$_expectEdges$_expectEdgesAbsent$_expectNoConnectedEdges._verticesWithPathTo,
-			value: regeneratorRuntime.mark(function callee$1$5(to, done) {
+			key: _privateEs6Js._verticesWithPathTo,
+			value: regeneratorRuntime.mark(function value(to, done) {
 				var _iteratorNormalCompletion14, _didIteratorError14, _iteratorError14, _iterator14, _step14, _step14$value, from;
 	
-				return regeneratorRuntime.wrap(function callee$1$5$(context$2$0) {
+				return regeneratorRuntime.wrap(function value$(context$2$0) {
 					while (1) switch (context$2$0.prev = context$2$0.next) {
 						case 0:
 							_iteratorNormalCompletion14 = true;
@@ -1826,7 +1839,7 @@ return /******/ (function(modules) { // webpackBootstrap
 							return this.vertex(from);
 	
 						case 12:
-							return context$2$0.delegateYield(this[_options$_vertices$_edges$_reverseEdges$_sources$_sinks$_edgeCount$_listeners$_extractTwoArgs$_extractThreeArgs$_trigger$_verticesFrom$_verticesTo$_edgesFrom$_edgesTo$_verticesWithPathTo$_verticesWithPathFrom$_paths$_expectVertices$_expectVerticesAbsent$_expectEdges$_expectEdgesAbsent$_expectNoConnectedEdges._verticesWithPathTo](from, done), 't9', 13);
+							return context$2$0.delegateYield(this[_privateEs6Js._verticesWithPathTo](from, done), 't0', 13);
 	
 						case 13:
 							_iteratorNormalCompletion14 = true;
@@ -1839,9 +1852,9 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 						case 18:
 							context$2$0.prev = 18;
-							context$2$0.t10 = context$2$0['catch'](3);
+							context$2$0.t1 = context$2$0['catch'](3);
 							_didIteratorError14 = true;
-							_iteratorError14 = context$2$0.t10;
+							_iteratorError14 = context$2$0.t1;
 	
 						case 22:
 							context$2$0.prev = 22;
@@ -1871,10 +1884,8 @@ return /******/ (function(modules) { // webpackBootstrap
 						case 'end':
 							return context$2$0.stop();
 					}
-				}, callee$1$5, this, [[3, 18, 22, 30], [23,, 25, 29]]);
+				}, value, this, [[3, 18, 22, 30], [23,, 25, 29]]);
 			})
-		}, {
-			key: 'sources',
 	
 			/**
 	   * Iterate over all vertices that have no incoming edges, in no particular order.
@@ -1891,6 +1902,8 @@ return /******/ (function(modules) { // webpackBootstrap
 	   *     // iterates over all vertices with no incoming edges
 	   * }
 	   */
+		}, {
+			key: 'sources',
 			value: regeneratorRuntime.mark(function sources() {
 				var done, _iteratorNormalCompletion15, _didIteratorError15, _iteratorError15, _iterator15, _step15, key;
 	
@@ -1902,7 +1915,7 @@ return /******/ (function(modules) { // webpackBootstrap
 							_didIteratorError15 = false;
 							_iteratorError15 = undefined;
 							context$2$0.prev = 4;
-							_iterator15 = this[_options$_vertices$_edges$_reverseEdges$_sources$_sinks$_edgeCount$_listeners$_extractTwoArgs$_extractThreeArgs$_trigger$_verticesFrom$_verticesTo$_edgesFrom$_edgesTo$_verticesWithPathTo$_verticesWithPathFrom$_paths$_expectVertices$_expectVerticesAbsent$_expectEdges$_expectEdgesAbsent$_expectNoConnectedEdges._sources][Symbol.iterator]();
+							_iterator15 = this[_privateEs6Js._sources][Symbol.iterator]();
 	
 						case 6:
 							if (_iteratorNormalCompletion15 = (_step15 = _iterator15.next()).done) {
@@ -1932,9 +1945,9 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 						case 17:
 							context$2$0.prev = 17;
-							context$2$0.t11 = context$2$0['catch'](4);
+							context$2$0.t0 = context$2$0['catch'](4);
 							_didIteratorError15 = true;
-							_iteratorError15 = context$2$0.t11;
+							_iteratorError15 = context$2$0.t0;
 	
 						case 21:
 							context$2$0.prev = 21;
@@ -1966,8 +1979,6 @@ return /******/ (function(modules) { // webpackBootstrap
 					}
 				}, sources, this, [[4, 17, 21, 29], [22,, 24, 28]]);
 			})
-		}, {
-			key: 'sinks',
 	
 			/**
 	   * Iterate over all vertices that have no outgoing edges, in no particular order.
@@ -1984,6 +1995,8 @@ return /******/ (function(modules) { // webpackBootstrap
 	   *     // iterates over all vertices with no outgoing edges
 	   * }
 	   */
+		}, {
+			key: 'sinks',
 			value: regeneratorRuntime.mark(function sinks() {
 				var done, _iteratorNormalCompletion16, _didIteratorError16, _iteratorError16, _iterator16, _step16, key;
 	
@@ -1995,7 +2008,7 @@ return /******/ (function(modules) { // webpackBootstrap
 							_didIteratorError16 = false;
 							_iteratorError16 = undefined;
 							context$2$0.prev = 4;
-							_iterator16 = this[_options$_vertices$_edges$_reverseEdges$_sources$_sinks$_edgeCount$_listeners$_extractTwoArgs$_extractThreeArgs$_trigger$_verticesFrom$_verticesTo$_edgesFrom$_edgesTo$_verticesWithPathTo$_verticesWithPathFrom$_paths$_expectVertices$_expectVerticesAbsent$_expectEdges$_expectEdgesAbsent$_expectNoConnectedEdges._sinks][Symbol.iterator]();
+							_iterator16 = this[_privateEs6Js._sinks][Symbol.iterator]();
 	
 						case 6:
 							if (_iteratorNormalCompletion16 = (_step16 = _iterator16.next()).done) {
@@ -2025,9 +2038,9 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 						case 17:
 							context$2$0.prev = 17;
-							context$2$0.t12 = context$2$0['catch'](4);
+							context$2$0.t0 = context$2$0['catch'](4);
 							_didIteratorError16 = true;
-							_iteratorError16 = context$2$0.t12;
+							_iteratorError16 = context$2$0.t0;
 	
 						case 21:
 							context$2$0.prev = 21;
@@ -2059,8 +2072,6 @@ return /******/ (function(modules) { // webpackBootstrap
 					}
 				}, sinks, this, [[4, 17, 21, 29], [22,, 24, 28]]);
 			})
-		}, {
-			key: 'set',
 	
 			////////////////////////////////////////
 			////////// Setting & Clearing //////////
@@ -2072,6 +2083,8 @@ return /******/ (function(modules) { // webpackBootstrap
 	   * that are strictly necessary.
 	   * @param other {Graph} the graph copy to this graph
 	   */
+		}, {
+			key: 'set',
 			value: function set(other) {
 				var _iteratorNormalCompletion17 = true;
 				var _didIteratorError17 = false;
@@ -2197,12 +2210,12 @@ return /******/ (function(modules) { // webpackBootstrap
 					}
 				}
 			}
-		}, {
-			key: 'clearEdges',
 	
 			/**
 	   * Remove all edges from the graph, but leave the vertices intact.
 	   */
+		}, {
+			key: 'clearEdges',
 			value: function clearEdges() {
 				var _iteratorNormalCompletion21 = true;
 				var _didIteratorError21 = false;
@@ -2230,12 +2243,12 @@ return /******/ (function(modules) { // webpackBootstrap
 					}
 				}
 			}
-		}, {
-			key: 'clear',
 	
 			/**
 	   * Remove all edges and vertices from the graph, putting it back in its initial state.
 	   */
+		}, {
+			key: 'clear',
 			value: function clear() {
 				var _iteratorNormalCompletion22 = true;
 				var _didIteratorError22 = false;
@@ -2263,8 +2276,6 @@ return /******/ (function(modules) { // webpackBootstrap
 					}
 				}
 			}
-		}, {
-			key: 'equals',
 	
 			////////////////////////////////////////
 			////////// (Advanced) Queries //////////
@@ -2285,11 +2296,13 @@ return /******/ (function(modules) { // webpackBootstrap
 	   *     `[from, to]` key.
 	   * @returns {boolean} `true` if the two graphs are equal; `false` otherwise
 	   */
+		}, {
+			key: 'equals',
 			value: function equals(other) {
-				var eqV = arguments[1] === undefined ? function (x, y) {
+				var eqV = arguments.length <= 1 || arguments[1] === undefined ? function (x, y) {
 					return x === y;
 				} : arguments[1];
-				var eqE = arguments[2] === undefined ? eqV : arguments[2];
+				var eqE = arguments.length <= 2 || arguments[2] === undefined ? eqV : arguments[2];
 				return (function () {
 					if (!(other instanceof Graph)) {
 						return false;
@@ -2369,8 +2382,6 @@ return /******/ (function(modules) { // webpackBootstrap
 					return true;
 				}).apply(this, arguments);
 			}
-		}, {
-			key: 'cycles',
 	
 			/**
 	   * Iterate over all simple directed cycles in this graph, in no particular order.
@@ -2389,6 +2400,8 @@ return /******/ (function(modules) { // webpackBootstrap
 	   *     // iterates over all cycles of the graph
 	   * }
 	   */
+		}, {
+			key: 'cycles',
 			value: regeneratorRuntime.mark(function cycles() {
 				var marked2$0, pointStack, markedStack, mark, _this, backtrack, _iteratorNormalCompletion25, _didIteratorError25, _iteratorError25, _iterator25, _step25, _step25$value, a;
 	
@@ -2396,7 +2409,7 @@ return /******/ (function(modules) { // webpackBootstrap
 					while (1) switch (context$2$0.prev = context$2$0.next) {
 						case 0:
 							backtrack = function backtrack(v) {
-								var out = arguments[1] === undefined ? {} : arguments[1];
+								var out = arguments.length <= 1 || arguments[1] === undefined ? {} : arguments[1];
 	
 								var _arr, _i, _arr$_i, w, o, u;
 	
@@ -2446,7 +2459,7 @@ return /******/ (function(modules) { // webpackBootstrap
 											}
 	
 											o = {};
-											return context$3$0.delegateYield(backtrack(w, o), 't13', 19);
+											return context$3$0.delegateYield(backtrack(w, o), 't0', 19);
 	
 										case 19:
 											out.found = out.found || o.found;
@@ -2495,7 +2508,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 							markedStack = [];
 							mark = new Set();
-							return context$2$0.delegateYield(backtrack(a), 't14', 16);
+							return context$2$0.delegateYield(backtrack(a), 't0', 16);
 	
 						case 16:
 							_iteratorNormalCompletion25 = true;
@@ -2508,9 +2521,9 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 						case 21:
 							context$2$0.prev = 21;
-							context$2$0.t15 = context$2$0['catch'](8);
+							context$2$0.t1 = context$2$0['catch'](8);
 							_didIteratorError25 = true;
-							_iteratorError25 = context$2$0.t15;
+							_iteratorError25 = context$2$0.t1;
 	
 						case 25:
 							context$2$0.prev = 25;
@@ -2542,30 +2555,28 @@ return /******/ (function(modules) { // webpackBootstrap
 					}
 				}, cycles, this, [[8, 21, 25, 33], [26,, 28, 32]]);
 			})
-		}, {
-			key: 'cycle',
 	
 			/**
 	   * Find any directed cycle in this graph.
 	   * @returns {?Array} an array containing the vertex keys describing the cycle; `null`, if there is no cycle;
 	   *                   The array will contain each vertex key only once — even the first/last one.
 	   */
+		}, {
+			key: 'cycle',
 			value: function cycle() {
 				var result = this.cycles().next();
 				return result.done ? null : result.value;
 			}
-		}, {
-			key: 'hasCycle',
 	
 			/**
 	   * Test whether this graph contains a directed cycle.
 	   * @returns {boolean} whether this graph contains any directed cycle
 	   */
+		}, {
+			key: 'hasCycle',
 			value: function hasCycle() {
 				return !this.cycles().next().done;
 			}
-		}, {
-			key: 'paths',
 	
 			/**
 	   * Iterate over all paths between two given keys in this graph, in no particular order.
@@ -2586,23 +2597,25 @@ return /******/ (function(modules) { // webpackBootstrap
 	   *     // iterates over all paths between `from` and `to` in the graph
 	   * }
 	   */ // TODO: allow [from, to] array to be given as argument in docs
+		}, {
+			key: 'paths',
 			value: function paths(from, to) {
-				var _Graph$_extractTwoArgs11 = Graph[_options$_vertices$_edges$_reverseEdges$_sources$_sinks$_edgeCount$_listeners$_extractTwoArgs$_extractThreeArgs$_trigger$_verticesFrom$_verticesTo$_edgesFrom$_edgesTo$_verticesWithPathTo$_verticesWithPathFrom$_paths$_expectVertices$_expectVerticesAbsent$_expectEdges$_expectEdgesAbsent$_expectNoConnectedEdges._extractTwoArgs](from, to);
+				var _Graph$_extractTwoArgs11 = Graph[_privateEs6Js._extractTwoArgs](from, to);
 	
 				var _Graph$_extractTwoArgs112 = _slicedToArray(_Graph$_extractTwoArgs11, 2);
 	
 				from = _Graph$_extractTwoArgs112[0];
 				to = _Graph$_extractTwoArgs112[1];
 	
-				this[_options$_vertices$_edges$_reverseEdges$_sources$_sinks$_edgeCount$_listeners$_extractTwoArgs$_extractThreeArgs$_trigger$_verticesFrom$_verticesTo$_edgesFrom$_edgesTo$_verticesWithPathTo$_verticesWithPathFrom$_paths$_expectVertices$_expectVerticesAbsent$_expectEdges$_expectEdgesAbsent$_expectNoConnectedEdges._expectVertices](from, to);
-				return this[_options$_vertices$_edges$_reverseEdges$_sources$_sinks$_edgeCount$_listeners$_extractTwoArgs$_extractThreeArgs$_trigger$_verticesFrom$_verticesTo$_edgesFrom$_edgesTo$_verticesWithPathTo$_verticesWithPathFrom$_paths$_expectVertices$_expectVerticesAbsent$_expectEdges$_expectEdgesAbsent$_expectNoConnectedEdges._paths](from, to);
+				this[_privateEs6Js._expectVertices](from, to);
+				return this[_privateEs6Js._paths](from, to);
 			}
 		}, {
-			key: _options$_vertices$_edges$_reverseEdges$_sources$_sinks$_edgeCount$_listeners$_extractTwoArgs$_extractThreeArgs$_trigger$_verticesFrom$_verticesTo$_edgesFrom$_edgesTo$_verticesWithPathTo$_verticesWithPathFrom$_paths$_expectVertices$_expectVerticesAbsent$_expectEdges$_expectEdgesAbsent$_expectNoConnectedEdges._paths,
-			value: regeneratorRuntime.mark(function callee$1$6(from, to) {
+			key: _privateEs6Js._paths,
+			value: regeneratorRuntime.mark(function value(from, to) {
 				var marked2$0, stack, _this, pathsFromPrefix;
 	
-				return regeneratorRuntime.wrap(function callee$1$6$(context$2$0) {
+				return regeneratorRuntime.wrap(function value$(context$2$0) {
 					while (1) switch (context$2$0.prev = context$2$0.next) {
 						case 0:
 							pathsFromPrefix = function pathsFromPrefix(current) {
@@ -2645,7 +2658,7 @@ return /******/ (function(modules) { // webpackBootstrap
 												break;
 											}
 	
-											return context$3$0.delegateYield(pathsFromPrefix(next), 't16', 16);
+											return context$3$0.delegateYield(pathsFromPrefix(next), 't0', 16);
 	
 										case 16:
 											_iteratorNormalCompletion26 = true;
@@ -2658,9 +2671,9 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 										case 21:
 											context$3$0.prev = 21;
-											context$3$0.t17 = context$3$0['catch'](4);
+											context$3$0.t1 = context$3$0['catch'](4);
 											_didIteratorError26 = true;
-											_iteratorError26 = context$3$0.t17;
+											_iteratorError26 = context$3$0.t1;
 	
 										case 25:
 											context$3$0.prev = 25;
@@ -2699,16 +2712,14 @@ return /******/ (function(modules) { // webpackBootstrap
 							marked2$0 = [pathsFromPrefix].map(regeneratorRuntime.mark);
 							stack = [];
 							_this = this;
-							return context$2$0.delegateYield(pathsFromPrefix(from), 't18', 5);
+							return context$2$0.delegateYield(pathsFromPrefix(from), 't0', 5);
 	
 						case 5:
 						case 'end':
 							return context$2$0.stop();
 					}
-				}, callee$1$6, this);
+				}, value, this);
 			})
-		}, {
-			key: 'path',
 	
 			/**
 	   * Find any path between a given pair of keys.
@@ -2718,12 +2729,12 @@ return /******/ (function(modules) { // webpackBootstrap
 	   * @returns {?Array} an array with the keys of the path found between the two vertices,
 	   *                   including those two vertices themselves; `null` if no such path exists
 	   */ // TODO: allow [from, to] array to be given as argument in docs
+		}, {
+			key: 'path',
 			value: function path(from, to) {
 				var result = this.paths(from, to).next();
 				return result.done ? null : result.value;
 			}
-		}, {
-			key: 'hasPath',
 	
 			/**
 	   * Test whether there is a directed path between a given pair of keys.
@@ -2732,11 +2743,11 @@ return /******/ (function(modules) { // webpackBootstrap
 	   * @throws {Graph.VertexNotExistsError} if the `from` and/or `to` vertices do not yet exist in the graph
 	   * @returns {boolean} whether such a path exists
 	   */ // TODO: allow [from, to] array to be given as argument in docs
+		}, {
+			key: 'hasPath',
 			value: function hasPath(from, to) {
 				return !this.paths(from, to).next().done;
 			}
-		}, {
-			key: 'outDegree',
 	
 			/**
 	   * Get the number of edges going out of a given vertex.
@@ -2744,12 +2755,12 @@ return /******/ (function(modules) { // webpackBootstrap
 	   * @param key {string} the key of the vertex to query
 	   * @returns {number} the number of edges going out of the `key` vertex
 	   */
-			value: function outDegree(key) {
-				this[_options$_vertices$_edges$_reverseEdges$_sources$_sinks$_edgeCount$_listeners$_extractTwoArgs$_extractThreeArgs$_trigger$_verticesFrom$_verticesTo$_edgesFrom$_edgesTo$_verticesWithPathTo$_verticesWithPathFrom$_paths$_expectVertices$_expectVerticesAbsent$_expectEdges$_expectEdgesAbsent$_expectNoConnectedEdges._expectVertices](key);
-				return this[_options$_vertices$_edges$_reverseEdges$_sources$_sinks$_edgeCount$_listeners$_extractTwoArgs$_extractThreeArgs$_trigger$_verticesFrom$_verticesTo$_edgesFrom$_edgesTo$_verticesWithPathTo$_verticesWithPathFrom$_paths$_expectVertices$_expectVerticesAbsent$_expectEdges$_expectEdgesAbsent$_expectNoConnectedEdges._edges].get(key).size;
-			}
 		}, {
-			key: 'inDegree',
+			key: 'outDegree',
+			value: function outDegree(key) {
+				this[_privateEs6Js._expectVertices](key);
+				return this[_privateEs6Js._edges].get(key).size;
+			}
 	
 			/**
 	   * Get the number of edges coming into a given vertex.
@@ -2757,12 +2768,12 @@ return /******/ (function(modules) { // webpackBootstrap
 	   * @param key {string} the key of the vertex to query
 	   * @returns {number} the number of edges coming into the `key` vertex
 	   */
-			value: function inDegree(key) {
-				this[_options$_vertices$_edges$_reverseEdges$_sources$_sinks$_edgeCount$_listeners$_extractTwoArgs$_extractThreeArgs$_trigger$_verticesFrom$_verticesTo$_edgesFrom$_edgesTo$_verticesWithPathTo$_verticesWithPathFrom$_paths$_expectVertices$_expectVerticesAbsent$_expectEdges$_expectEdgesAbsent$_expectNoConnectedEdges._expectVertices](key);
-				return this[_options$_vertices$_edges$_reverseEdges$_sources$_sinks$_edgeCount$_listeners$_extractTwoArgs$_extractThreeArgs$_trigger$_verticesFrom$_verticesTo$_edgesFrom$_edgesTo$_verticesWithPathTo$_verticesWithPathFrom$_paths$_expectVertices$_expectVerticesAbsent$_expectEdges$_expectEdgesAbsent$_expectNoConnectedEdges._reverseEdges].get(key).size;
-			}
 		}, {
-			key: 'degree',
+			key: 'inDegree',
+			value: function inDegree(key) {
+				this[_privateEs6Js._expectVertices](key);
+				return this[_privateEs6Js._reverseEdges].get(key).size;
+			}
 	
 			/**
 	   * Get the number of edges connected to a given vertex.
@@ -2770,11 +2781,11 @@ return /******/ (function(modules) { // webpackBootstrap
 	   * @param key {string} the key of the vertex to query
 	   * @returns {number} the number of edges connected to the `key` vertex
 	   */
+		}, {
+			key: 'degree',
 			value: function degree(key) {
 				return this.outDegree(key) + this.inDegree(key);
 			}
-		}, {
-			key: 'mergeIn',
 	
 			///////////////////////////////////////
 			////////// Cloning and stuff //////////
@@ -2796,11 +2807,13 @@ return /******/ (function(modules) { // webpackBootstrap
 	   *     `other` graph respectively. The third is the
 	   *     corresponding `[from, to]` key.
 	   */
+		}, {
+			key: 'mergeIn',
 			value: function mergeIn(other) {
-				var mV = arguments[1] === undefined ? function (v1, v2) {
+				var mV = arguments.length <= 1 || arguments[1] === undefined ? function (v1, v2) {
 					return v2;
 				} : arguments[1];
-				var mE = arguments[2] === undefined ? mV : arguments[2];
+				var mE = arguments.length <= 2 || arguments[2] === undefined ? mV : arguments[2];
 				return (function () {
 					var _iteratorNormalCompletion27 = true;
 					var _didIteratorError27 = false;
@@ -2859,8 +2872,6 @@ return /******/ (function(modules) { // webpackBootstrap
 					}
 				}).apply(this, arguments);
 			}
-		}, {
-			key: 'clone',
 	
 			/**
 	   * Create a clone of this graph.
@@ -2875,11 +2886,13 @@ return /******/ (function(modules) { // webpackBootstrap
 	   *     `[from, to]` key.
 	   * @returns {Graph} a clone of this graph
 	   */
+		}, {
+			key: 'clone',
 			value: function clone() {
-				var trV = arguments[0] === undefined ? function (v) {
+				var trV = arguments.length <= 0 || arguments[0] === undefined ? function (v) {
 					return v;
 				} : arguments[0];
-				var trE = arguments[1] === undefined ? trV : arguments[1];
+				var trE = arguments.length <= 1 || arguments[1] === undefined ? trV : arguments[1];
 				return (function () {
 					var result = new Graph();
 					result.mergeIn(this, function (v1, v2) {
@@ -2890,8 +2903,6 @@ return /******/ (function(modules) { // webpackBootstrap
 					return result;
 				}).apply(this, arguments);
 			}
-		}, {
-			key: 'transitiveReduction',
 	
 			/**
 	   * Create a clone of this graph, but without any transitive edges.
@@ -2906,6 +2917,8 @@ return /******/ (function(modules) { // webpackBootstrap
 	   *     `[from, to]` key.
 	   * @returns {Graph} a clone of this graph with all transitive edges removed
 	   */
+		}, {
+			key: 'transitiveReduction',
 			value: function transitiveReduction(trV, trE) {
 				// argument defaults are handled in `clone`
 				var result = this.clone(trV, trE);
@@ -2989,8 +3002,6 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 				return result;
 			}
-		}, {
-			key: 'contractPaths',
 	
 			/**
 	   * This method replaces stretches of non-branching directed pathway into single edges.
@@ -3007,10 +3018,12 @@ return /******/ (function(modules) { // webpackBootstrap
 	   *                  true if and only if that vertex should be a nexus.
 	   * @throws {Graph.BranchlessCycleError} if the graph contains a cycle with no branches or nexuses
 	   */
+		}, {
+			key: 'contractPaths',
 			value: function contractPaths() {
-				var _this3 = this;
+				var _this2 = this;
 	
-				var _ref = arguments[0] === undefined ? {} : arguments[0];
+				var _ref = arguments.length <= 0 || arguments[0] === undefined ? {} : arguments[0];
 	
 				var isNexus = _ref.isNexus;
 	
@@ -3027,7 +3040,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 					var key = _ref22[0];
 					var val = _ref22[1];
-					return _this3.outDegree(key) !== 1 || _this3.inDegree(key) !== 1 || isNexus(key, val);
+					return _this2.outDegree(key) !== 1 || _this2.inDegree(key) !== 1 || isNexus(key, val);
 				}).map(function (_ref3) {
 					var _ref32 = _slicedToArray(_ref3, 1);
 	
@@ -3046,7 +3059,7 @@ return /******/ (function(modules) { // webpackBootstrap
 					var _iterator34, _step34;
 	
 					(function () {
-						var unhandledVertices = new Set([].concat(_toConsumableArray(_this3.vertices())).map(function (_ref4) {
+						var unhandledVertices = new Set([].concat(_toConsumableArray(_this2.vertices())).map(function (_ref4) {
 							var _ref42 = _slicedToArray(_ref4, 1);
 	
 							var key = _ref42[0];
@@ -3062,7 +3075,7 @@ return /******/ (function(modules) { // webpackBootstrap
 							var _iteratorError32 = undefined;
 	
 							try {
-								for (var _iterator32 = _this3.verticesFrom(key)[Symbol.iterator](), _step32; !(_iteratorNormalCompletion32 = (_step32 = _iterator32.next()).done); _iteratorNormalCompletion32 = true) {
+								for (var _iterator32 = _this2.verticesFrom(key)[Symbol.iterator](), _step32; !(_iteratorNormalCompletion32 = (_step32 = _iterator32.next()).done); _iteratorNormalCompletion32 = true) {
 									var _step32$value = _slicedToArray(_step32.value, 1);
 	
 									var next = _step32$value[0];
@@ -3088,7 +3101,7 @@ return /******/ (function(modules) { // webpackBootstrap
 							var _iteratorError33 = undefined;
 	
 							try {
-								for (var _iterator33 = _this3.verticesTo(key)[Symbol.iterator](), _step33; !(_iteratorNormalCompletion33 = (_step33 = _iterator33.next()).done); _iteratorNormalCompletion33 = true) {
+								for (var _iterator33 = _this2.verticesTo(key)[Symbol.iterator](), _step33; !(_iteratorNormalCompletion33 = (_step33 = _iterator33.next()).done); _iteratorNormalCompletion33 = true) {
 									var _step33$value = _slicedToArray(_step33.value, 1);
 	
 									var next = _step33$value[0];
@@ -3139,7 +3152,7 @@ return /******/ (function(modules) { // webpackBootstrap
 							    current = startingKey;
 							do {
 								cycle.push(current);
-								current = _this3.verticesFrom(current).next().value[0];
+								current = _this2.verticesFrom(current).next().value[0];
 							} while (current !== startingKey);
 							throw new Graph.BranchlessCycleError(cycle);
 						}
@@ -3153,23 +3166,23 @@ return /******/ (function(modules) { // webpackBootstrap
 				var startPath = function startPath(start, next, backwards) {
 					/* functions to help branch on `backwards` */
 					var fromTo = function fromTo() {
-						var strt = arguments[0] === undefined ? start : arguments[0];
-						var nxt = arguments[1] === undefined ? next : arguments[1];
+						var strt = arguments.length <= 0 || arguments[0] === undefined ? start : arguments[0];
+						var nxt = arguments.length <= 1 || arguments[1] === undefined ? next : arguments[1];
 						return backwards ? [nxt, strt] : [strt, nxt];
 					};
 					var verticesNext = function verticesNext(v) {
-						return backwards ? _this3.verticesTo(v) : _this3.verticesFrom(v);
+						return backwards ? _this2.verticesTo(v) : _this2.verticesFrom(v);
 					};
 	
 					/* bookkeeping */
 					var verticesToRemove = new Set();
 					var edgesToRemove = new Set();
-					var path = new _this3.constructor();
+					var path = new _this2.constructor();
 	
 					/* process the start of the path */
-					path.addVertex(start, _this3.vertexValue(start));
-					path.addVertex(next, _this3.vertexValue(next));
-					path.addNewEdge.apply(path, _toConsumableArray(fromTo()).concat([_this3.edgeValue.apply(_this3, _toConsumableArray(fromTo()))]));
+					path.addVertex(start, _this2.vertexValue(start));
+					path.addVertex(next, _this2.vertexValue(next));
+					path.addNewEdge.apply(path, _toConsumableArray(fromTo()).concat([_this2.edgeValue.apply(_this2, _toConsumableArray(fromTo()))]));
 					edgesToRemove.add(fromTo());
 	
 					/* process as [current, next] moves across the path */
@@ -3179,8 +3192,8 @@ return /******/ (function(modules) { // webpackBootstrap
 						current = _ref5[0];
 						next = _ref5[1];
 	
-						path.addVertex(next, _this3.vertexValue(next));
-						path.addNewEdge.apply(path, _toConsumableArray(fromTo(current, next)).concat([_this3.edgeValue.apply(_this3, _toConsumableArray(fromTo(current, next)))]));
+						path.addVertex(next, _this2.vertexValue(next));
+						path.addNewEdge.apply(path, _toConsumableArray(fromTo(current, next)).concat([_this2.edgeValue.apply(_this2, _toConsumableArray(fromTo(current, next)))]));
 						verticesToRemove.add(current);
 						edgesToRemove.add(fromTo(current, next));
 					}
@@ -3190,7 +3203,7 @@ return /******/ (function(modules) { // webpackBootstrap
 						contractionsToAdd.set(fromTo()[0], new Map());
 					}
 					if (!contractionsToAdd.get(fromTo()[0]).get(fromTo()[1])) {
-						contractionsToAdd.get(fromTo()[0]).set(fromTo()[1], new _this3.constructor());
+						contractionsToAdd.get(fromTo()[0]).set(fromTo()[1], new _this2.constructor());
 					}
 					contractionsToAdd.get(fromTo()[0]).get(fromTo()[1]).mergeIn(path);
 	
@@ -3202,7 +3215,7 @@ return /******/ (function(modules) { // webpackBootstrap
 					try {
 						for (var _iterator35 = edgesToRemove[Symbol.iterator](), _step35; !(_iteratorNormalCompletion35 = (_step35 = _iterator35.next()).done); _iteratorNormalCompletion35 = true) {
 							var key = _step35.value;
-							_this3.removeExistingEdge.apply(_this3, _toConsumableArray(key));
+							_this2.removeExistingEdge.apply(_this2, _toConsumableArray(key));
 						}
 					} catch (err) {
 						_didIteratorError35 = true;
@@ -3226,7 +3239,7 @@ return /******/ (function(modules) { // webpackBootstrap
 					try {
 						for (var _iterator36 = verticesToRemove[Symbol.iterator](), _step36; !(_iteratorNormalCompletion36 = (_step36 = _iterator36.next()).done); _iteratorNormalCompletion36 = true) {
 							var key = _step36.value;
-							_this3.destroyExistingVertex(key);
+							_this2.destroyExistingVertex(key);
 						}
 					} catch (err) {
 						_didIteratorError36 = true;
@@ -3304,6 +3317,8 @@ return /******/ (function(modules) { // webpackBootstrap
 							}
 						}
 					}
+	
+					/* add the replacement edges */
 				} catch (err) {
 					_didIteratorError37 = true;
 					_iteratorError37 = err;
@@ -3319,7 +3334,6 @@ return /******/ (function(modules) { // webpackBootstrap
 					}
 				}
 	
-				/* add the replacement edges */
 				var _iteratorNormalCompletion38 = true;
 				var _didIteratorError38 = false;
 				var _iteratorError38 = undefined;
@@ -3373,82 +3387,82 @@ return /******/ (function(modules) { // webpackBootstrap
 					}
 				}
 			}
-		}, {
-			key: _options$_vertices$_edges$_reverseEdges$_sources$_sinks$_edgeCount$_listeners$_extractTwoArgs$_extractThreeArgs$_trigger$_verticesFrom$_verticesTo$_edgesFrom$_edgesTo$_verticesWithPathTo$_verticesWithPathFrom$_paths$_expectVertices$_expectVerticesAbsent$_expectEdges$_expectEdgesAbsent$_expectNoConnectedEdges._expectVertices,
 	
 			////////////////////////////////
 			////////// Assertions //////////
 			////////////////////////////////
 	
-			value: function () {
-				var _this4 = this;
+		}, {
+			key: _privateEs6Js._expectVertices,
+			value: function value() {
+				var _this3 = this;
 	
 				for (var _len2 = arguments.length, keys = Array(_len2), _key2 = 0; _key2 < _len2; _key2++) {
 					keys[_key2] = arguments[_key2];
 				}
 	
 				var missingVertices = keys.filter(function (k) {
-					return !_this4.hasVertex(k);
+					return !_this3.hasVertex(k);
 				});
 				if (missingVertices.length) {
 					throw new (_bind.apply(Graph.VertexNotExistsError, [null].concat(_toConsumableArray(missingVertices))))();
 				}
 			}
 		}, {
-			key: _options$_vertices$_edges$_reverseEdges$_sources$_sinks$_edgeCount$_listeners$_extractTwoArgs$_extractThreeArgs$_trigger$_verticesFrom$_verticesTo$_edgesFrom$_edgesTo$_verticesWithPathTo$_verticesWithPathFrom$_paths$_expectVertices$_expectVerticesAbsent$_expectEdges$_expectEdgesAbsent$_expectNoConnectedEdges._expectVerticesAbsent,
-			value: function () {
-				var _this5 = this;
+			key: _privateEs6Js._expectVerticesAbsent,
+			value: function value() {
+				var _this4 = this;
 	
 				for (var _len3 = arguments.length, keys = Array(_len3), _key3 = 0; _key3 < _len3; _key3++) {
 					keys[_key3] = arguments[_key3];
 				}
 	
 				var presentVertices = keys.filter(function (k) {
-					return _this5.hasVertex(k);
+					return _this4.hasVertex(k);
 				});
 				if (presentVertices.length) {
 					throw new (_bind.apply(Graph.VertexExistsError, [null].concat(_toConsumableArray(presentVertices.map(function (key) {
-						return _this5.vertex(key);
+						return _this4.vertex(key);
 					})))))();
 				}
 			}
 		}, {
-			key: _options$_vertices$_edges$_reverseEdges$_sources$_sinks$_edgeCount$_listeners$_extractTwoArgs$_extractThreeArgs$_trigger$_verticesFrom$_verticesTo$_edgesFrom$_edgesTo$_verticesWithPathTo$_verticesWithPathFrom$_paths$_expectVertices$_expectVerticesAbsent$_expectEdges$_expectEdgesAbsent$_expectNoConnectedEdges._expectEdges,
-			value: function () {
-				var _this6 = this;
+			key: _privateEs6Js._expectEdges,
+			value: function value() {
+				var _this5 = this;
 	
 				for (var _len4 = arguments.length, keys = Array(_len4), _key4 = 0; _key4 < _len4; _key4++) {
 					keys[_key4] = arguments[_key4];
 				}
 	
 				var absentEdges = keys.filter(function (k) {
-					return !_this6.hasEdge.apply(_this6, _toConsumableArray(k));
+					return !_this5.hasEdge.apply(_this5, _toConsumableArray(k));
 				});
 				if (absentEdges.length) {
 					throw new (_bind.apply(Graph.EdgeNotExistsError, [null].concat(_toConsumableArray(absentEdges))))();
 				}
 			}
 		}, {
-			key: _options$_vertices$_edges$_reverseEdges$_sources$_sinks$_edgeCount$_listeners$_extractTwoArgs$_extractThreeArgs$_trigger$_verticesFrom$_verticesTo$_edgesFrom$_edgesTo$_verticesWithPathTo$_verticesWithPathFrom$_paths$_expectVertices$_expectVerticesAbsent$_expectEdges$_expectEdgesAbsent$_expectNoConnectedEdges._expectEdgesAbsent,
-			value: function () {
-				var _this7 = this;
+			key: _privateEs6Js._expectEdgesAbsent,
+			value: function value() {
+				var _this6 = this;
 	
 				for (var _len5 = arguments.length, keys = Array(_len5), _key5 = 0; _key5 < _len5; _key5++) {
 					keys[_key5] = arguments[_key5];
 				}
 	
 				var presentEdges = keys.filter(function (k) {
-					return _this7.hasEdge.apply(_this7, _toConsumableArray(k));
+					return _this6.hasEdge.apply(_this6, _toConsumableArray(k));
 				});
 				if (presentEdges.length) {
 					throw new (_bind.apply(Graph.EdgeExistsError, [null].concat(_toConsumableArray(presentEdges.map(function (key) {
-						return _this7.edge(key);
+						return _this6.edge(key);
 					})))))();
 				}
 			}
 		}, {
-			key: _options$_vertices$_edges$_reverseEdges$_sources$_sinks$_edgeCount$_listeners$_extractTwoArgs$_extractThreeArgs$_trigger$_verticesFrom$_verticesTo$_edgesFrom$_edgesTo$_verticesWithPathTo$_verticesWithPathFrom$_paths$_expectVertices$_expectVerticesAbsent$_expectEdges$_expectEdgesAbsent$_expectNoConnectedEdges._expectNoConnectedEdges,
-			value: function (key) {
+			key: _privateEs6Js._expectNoConnectedEdges,
+			value: function value(key) {
 				var edges = [];
 				var _iteratorNormalCompletion42 = true;
 				var _didIteratorError42 = false;
@@ -3507,42 +3521,29 @@ return /******/ (function(modules) { // webpackBootstrap
 				}
 			}
 		}], [{
-			key: _options$_vertices$_edges$_reverseEdges$_sources$_sinks$_edgeCount$_listeners$_extractTwoArgs$_extractThreeArgs$_trigger$_verticesFrom$_verticesTo$_edgesFrom$_edgesTo$_verticesWithPathTo$_verticesWithPathFrom$_paths$_expectVertices$_expectVerticesAbsent$_expectEdges$_expectEdgesAbsent$_expectNoConnectedEdges._extractTwoArgs,
-	
-			////////////////////////////////////////////////////////
-			////////// Static private convenience methods //////////
-			////////////////////////////////////////////////////////
-	
-			value: function (a, b) {
+			key: _privateEs6Js._extractTwoArgs,
+			value: function value(a, b) {
 				return Array.isArray(a) ? a : [a, b];
 			}
 		}, {
-			key: _options$_vertices$_edges$_reverseEdges$_sources$_sinks$_edgeCount$_listeners$_extractTwoArgs$_extractThreeArgs$_trigger$_verticesFrom$_verticesTo$_edgesFrom$_edgesTo$_verticesWithPathTo$_verticesWithPathFrom$_paths$_expectVertices$_expectVerticesAbsent$_expectEdges$_expectEdgesAbsent$_expectNoConnectedEdges._extractThreeArgs,
-			value: function (a, b, c) {
+			key: _privateEs6Js._extractThreeArgs,
+			value: function value(a, b, c) {
 				if (Array.isArray(a)) {
-					var _temp = [].concat(_toConsumableArray(a), [b]);
+					var _ref6 = [].concat(_toConsumableArray(a), [b]);
 	
-					var _temp2 = _slicedToArray(_temp, 3);
-	
-					a = _temp2[0];
-					b = _temp2[1];
-					c = _temp2[2];
-					_temp;
+					a = _ref6[0];
+					b = _ref6[1];
+					c = _ref6[2];
 				}
 				if (Array.isArray(a)) {
-					var _temp3 = [].concat(_toConsumableArray(a), [b]);
+					var _ref7 = [].concat(_toConsumableArray(a), [b]);
 	
-					var _temp32 = _slicedToArray(_temp3, 3);
-	
-					a = _temp32[0];
-					b = _temp32[1];
-					c = _temp32[2];
-					_temp3;
+					a = _ref7[0];
+					b = _ref7[1];
+					c = _ref7[2];
 				}
 				return [a, b, c];
 			}
-		}, {
-			key: 'plugin',
 	
 			////////////////////////////
 			////////// Mixins //////////
@@ -3555,13 +3556,14 @@ return /******/ (function(modules) { // webpackBootstrap
 	   * @param method    {function} a function taking a graph as its first argument
 	   * @param [context] {object  } an optional object to refer to when using `this` inside the given `method`
 	   */
+		}, {
+			key: 'plugin',
 			value: function plugin(name, method, context) {
 				if (typeof name === 'function' && typeof name.name === 'string') {
-					var _temp4 = [name.name, name, method];
-					name = _temp4[0];
-					method = _temp4[1];
-					context = _temp4[2];
-					_temp4;
+					var _ref8 = [name.name, name, method];
+					name = _ref8[0];
+					method = _ref8[1];
+					context = _ref8[2];
 				}
 				if (typeof name === 'string') {
 					if (typeof method === 'function') {
@@ -3576,33 +3578,33 @@ return /******/ (function(modules) { // webpackBootstrap
 						this.prototype[name] = method; // document ability to add non-function values
 					}
 				} else {
-					var obj = name;
-					var _context = method;
-					var _iteratorNormalCompletion44 = true;
-					var _didIteratorError44 = false;
-					var _iteratorError44 = undefined;
+						var obj = name;
+						var _context = method;
+						var _iteratorNormalCompletion44 = true;
+						var _didIteratorError44 = false;
+						var _iteratorError44 = undefined;
 	
-					try {
-						for (var _iterator44 = Object.keys(obj)[Symbol.iterator](), _step44; !(_iteratorNormalCompletion44 = (_step44 = _iterator44.next()).done); _iteratorNormalCompletion44 = true) {
-							var _name = _step44.value;
-	
-							this.plugin(_name, obj[_name], _context || obj);
-						}
-					} catch (err) {
-						_didIteratorError44 = true;
-						_iteratorError44 = err;
-					} finally {
 						try {
-							if (!_iteratorNormalCompletion44 && _iterator44['return']) {
-								_iterator44['return']();
+							for (var _iterator44 = Object.keys(obj)[Symbol.iterator](), _step44; !(_iteratorNormalCompletion44 = (_step44 = _iterator44.next()).done); _iteratorNormalCompletion44 = true) {
+								var _name = _step44.value;
+	
+								this.plugin(_name, obj[_name], _context || obj);
 							}
+						} catch (err) {
+							_didIteratorError44 = true;
+							_iteratorError44 = err;
 						} finally {
-							if (_didIteratorError44) {
-								throw _iteratorError44;
+							try {
+								if (!_iteratorNormalCompletion44 && _iterator44['return']) {
+									_iterator44['return']();
+								}
+							} finally {
+								if (_didIteratorError44) {
+									throw _iteratorError44;
+								}
 							}
 						}
 					}
-				}
 			}
 		}]);
 	
@@ -3610,22 +3612,10 @@ return /******/ (function(modules) { // webpackBootstrap
 	})();
 	
 	exports['default'] = Graph;
-	
-	//  ////////////////////////////////////////////////////////////////////////////////////////////////
-	//  // Errors //////////////////////////////////////////////////////////////////////////////////////
-	//  ////////////////////////////////////////////////////////////////////////////////////////////////
-	
-	/**
-	 * @class
-	 * @classdesc This type of error is thrown when specific vertices are expected not to exist, but do.
-	 * @extends Error
-	 */
 	Graph.VertexExistsError = (function (_Error) {
-		function VertexExistsError() {
-			for (var _len7 = arguments.length, vertices = Array(_len7), _key7 = 0; _key7 < _len7; _key7++) {
-				vertices[_key7] = arguments[_key7];
-			}
+		_inherits(VertexExistsError, _Error);
 	
+		function VertexExistsError() {
 			_classCallCheck(this, VertexExistsError);
 	
 			_get(Object.getPrototypeOf(VertexExistsError.prototype), 'constructor', this).call(this);
@@ -3637,16 +3627,19 @@ return /******/ (function(modules) { // webpackBootstrap
 	   * @instance
 	   * @type {Set.<Array>}
 	   */
-			this.vertices = new Set(vertices);
-			this.message = 'This graph has ' + (this.vertices.size === 1 ? 'a vertex' : 'vertices') + ' \'' + [].concat(_toConsumableArray(this.vertices)).map(function (_ref6) {
-				var _ref62 = _slicedToArray(_ref6, 1);
 	
-				var key = _ref62[0];
+			for (var _len7 = arguments.length, vertices = Array(_len7), _key7 = 0; _key7 < _len7; _key7++) {
+				vertices[_key7] = arguments[_key7];
+			}
+	
+			this.vertices = new Set(vertices);
+			this.message = 'This graph has ' + (this.vertices.size === 1 ? "a vertex" : "vertices") + ' \'' + [].concat(_toConsumableArray(this.vertices)).map(function (_ref9) {
+				var _ref92 = _slicedToArray(_ref9, 1);
+	
+				var key = _ref92[0];
 				return key;
 			}).join('\', \'') + '\'';
 		}
-	
-		_inherits(VertexExistsError, _Error);
 	
 		return VertexExistsError;
 	})(Error);
@@ -3657,11 +3650,9 @@ return /******/ (function(modules) { // webpackBootstrap
 	 * @extends Error
 	 */
 	Graph.VertexNotExistsError = (function (_Error2) {
-		function VertexNotExistsError() {
-			for (var _len8 = arguments.length, keys = Array(_len8), _key8 = 0; _key8 < _len8; _key8++) {
-				keys[_key8] = arguments[_key8];
-			}
+		_inherits(VertexNotExistsError, _Error2);
 	
+		function VertexNotExistsError() {
 			_classCallCheck(this, VertexNotExistsError);
 	
 			_get(Object.getPrototypeOf(VertexNotExistsError.prototype), 'constructor', this).call(this);
@@ -3673,11 +3664,14 @@ return /******/ (function(modules) { // webpackBootstrap
 	   * @instance
 	   * @type {Set.<string>}
 	   */
-			this.vertices = new Set(keys);
-			this.message = 'This graph does not have ' + (this.vertices.size === 1 ? 'a vertex' : 'vertices') + ' \'' + [].concat(_toConsumableArray(this.vertices)).join('\', \'') + '\'';
-		}
 	
-		_inherits(VertexNotExistsError, _Error2);
+			for (var _len8 = arguments.length, keys = Array(_len8), _key8 = 0; _key8 < _len8; _key8++) {
+				keys[_key8] = arguments[_key8];
+			}
+	
+			this.vertices = new Set(keys);
+			this.message = 'This graph does not have ' + (this.vertices.size === 1 ? "a vertex" : "vertices") + ' \'' + [].concat(_toConsumableArray(this.vertices)).join('\', \'') + '\'';
+		}
 	
 		return VertexNotExistsError;
 	})(Error);
@@ -3688,11 +3682,9 @@ return /******/ (function(modules) { // webpackBootstrap
 	 * @extends Error
 	 */
 	Graph.EdgeExistsError = (function (_Error3) {
-		function EdgeExistsError() {
-			for (var _len9 = arguments.length, edges = Array(_len9), _key9 = 0; _key9 < _len9; _key9++) {
-				edges[_key9] = arguments[_key9];
-			}
+		_inherits(EdgeExistsError, _Error3);
 	
+		function EdgeExistsError() {
 			_classCallCheck(this, EdgeExistsError);
 	
 			_get(Object.getPrototypeOf(EdgeExistsError.prototype), 'constructor', this).call(this);
@@ -3704,16 +3696,19 @@ return /******/ (function(modules) { // webpackBootstrap
 	   * @instance
 	   * @type {Set.<Array>}
 	   */
-			this.edges = new Set(edges);
-			this.message = 'This graph has ' + (this.edges.size === 1 ? 'an edge' : 'edges') + ' ' + [].concat(_toConsumableArray(this.edges)).map(function (_ref7) {
-				var _ref72 = _slicedToArray(_ref7, 1);
 	
-				var key = _ref72[0];
+			for (var _len9 = arguments.length, edges = Array(_len9), _key9 = 0; _key9 < _len9; _key9++) {
+				edges[_key9] = arguments[_key9];
+			}
+	
+			this.edges = new Set(edges);
+			this.message = 'This graph has ' + (this.edges.size === 1 ? "an edge" : "edges") + ' ' + [].concat(_toConsumableArray(this.edges)).map(function (_ref10) {
+				var _ref102 = _slicedToArray(_ref10, 1);
+	
+				var key = _ref102[0];
 				return '[' + key + ']';
 			}).join(', ');
 		}
-	
-		_inherits(EdgeExistsError, _Error3);
 	
 		return EdgeExistsError;
 	})(Error);
@@ -3724,11 +3719,9 @@ return /******/ (function(modules) { // webpackBootstrap
 	 * @extends Error
 	 */
 	Graph.EdgeNotExistsError = (function (_Error4) {
-		function EdgeNotExistsError() {
-			for (var _len10 = arguments.length, edges = Array(_len10), _key10 = 0; _key10 < _len10; _key10++) {
-				edges[_key10] = arguments[_key10];
-			}
+		_inherits(EdgeNotExistsError, _Error4);
 	
+		function EdgeNotExistsError() {
 			_classCallCheck(this, EdgeNotExistsError);
 	
 			_get(Object.getPrototypeOf(EdgeNotExistsError.prototype), 'constructor', this).call(this);
@@ -3740,16 +3733,19 @@ return /******/ (function(modules) { // webpackBootstrap
 	   * @instance
 	   * @type {Set.<Array.<string>>}
 	   */
-			this.edges = new Set(edges);
-			this.message = 'This graph does not have ' + (this.edges.size === 1 ? 'an edge' : 'edges') + ' ' + [].concat(_toConsumableArray(this.edges)).map(function (_ref8) {
-				var _ref82 = _slicedToArray(_ref8, 1);
 	
-				var key = _ref82[0];
+			for (var _len10 = arguments.length, edges = Array(_len10), _key10 = 0; _key10 < _len10; _key10++) {
+				edges[_key10] = arguments[_key10];
+			}
+	
+			this.edges = new Set(edges);
+			this.message = 'This graph does not have ' + (this.edges.size === 1 ? "an edge" : "edges") + ' ' + [].concat(_toConsumableArray(this.edges)).map(function (_ref11) {
+				var _ref112 = _slicedToArray(_ref11, 1);
+	
+				var key = _ref112[0];
 				return '[' + key + ']';
 			}).join(', ');
 		}
-	
-		_inherits(EdgeNotExistsError, _Error4);
 	
 		return EdgeNotExistsError;
 	})(Error);
@@ -3760,12 +3756,14 @@ return /******/ (function(modules) { // webpackBootstrap
 	 * @extends Graph.EdgeExistsError
 	 */
 	Graph.HasConnectedEdgesError = (function (_Graph$EdgeExistsError) {
+		_inherits(HasConnectedEdgesError, _Graph$EdgeExistsError);
+	
 		function HasConnectedEdgesError(key) {
+			_classCallCheck(this, HasConnectedEdgesError);
+	
 			for (var _len11 = arguments.length, edges = Array(_len11 > 1 ? _len11 - 1 : 0), _key11 = 1; _key11 < _len11; _key11++) {
 				edges[_key11 - 1] = arguments[_key11];
 			}
-	
-			_classCallCheck(this, HasConnectedEdgesError);
 	
 			_get(Object.getPrototypeOf(HasConnectedEdgesError.prototype), 'constructor', this).apply(this, edges);
 			/**
@@ -3777,15 +3775,13 @@ return /******/ (function(modules) { // webpackBootstrap
 	   * @type {string}
 	   */
 			this.vertex = key;
-			this.message = 'The \'' + key + '\' vertex has connected ' + (this.edges.size === 1 ? 'an edge' : 'edges') + ' ' + [].concat(_toConsumableArray(this.edges)).map(function (_ref9) {
-				var _ref92 = _slicedToArray(_ref9, 1);
+			this.message = 'The \'' + key + '\' vertex has connected ' + (this.edges.size === 1 ? "an edge" : "edges") + ' ' + [].concat(_toConsumableArray(this.edges)).map(function (_ref12) {
+				var _ref122 = _slicedToArray(_ref12, 1);
 	
-				var key = _ref92[0];
+				var key = _ref122[0];
 				return '[' + key + ']';
 			}).join(', ');
 		}
-	
-		_inherits(HasConnectedEdgesError, _Graph$EdgeExistsError);
 	
 		return HasConnectedEdgesError;
 	})(Graph.EdgeExistsError);
@@ -3796,6 +3792,8 @@ return /******/ (function(modules) { // webpackBootstrap
 	 * @extends Error
 	 */
 	Graph.CycleError = (function (_Error5) {
+		_inherits(CycleError, _Error5);
+	
 		function CycleError(cycle) {
 			_classCallCheck(this, CycleError);
 	
@@ -3812,8 +3810,6 @@ return /******/ (function(modules) { // webpackBootstrap
 			this.message = 'This graph contains a cycle: ' + cycle;
 		}
 	
-		_inherits(CycleError, _Error5);
-	
 		return CycleError;
 	})(Error);
 	
@@ -3823,14 +3819,14 @@ return /******/ (function(modules) { // webpackBootstrap
 	 * @extends Graph.CycleError
 	 */
 	Graph.BranchlessCycleError = (function (_Graph$CycleError) {
+		_inherits(BranchlessCycleError, _Graph$CycleError);
+	
 		function BranchlessCycleError(cycle) {
 			_classCallCheck(this, BranchlessCycleError);
 	
 			_get(Object.getPrototypeOf(BranchlessCycleError.prototype), 'constructor', this).call(this, cycle);
 			this.message = 'This graph contains a branch-less cycle: ' + cycle;
 		}
-	
-		_inherits(BranchlessCycleError, _Graph$CycleError);
 	
 		return BranchlessCycleError;
 	})(Graph.CycleError);
@@ -3853,7 +3849,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	/* start backtracking from each vertex in the graph */
 
-/***/ }
+/***/ })
 
 /******/ })
 });
